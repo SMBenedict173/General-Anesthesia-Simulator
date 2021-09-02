@@ -1,0 +1,603 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.17f1 (a4537701e4ab) revision 10769271'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 16268 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/jbene/OneDrive/Documents/GitHub/General-Anesthesia-Simulator/GeneralAnesthesiaSimulator
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49890
+Successfully changed project path to: C:/Users/jbene/OneDrive/Documents/GitHub/General-Anesthesia-Simulator/GeneralAnesthesiaSimulator
+C:/Users/jbene/OneDrive/Documents/GitHub/General-Anesthesia-Simulator/GeneralAnesthesiaSimulator
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 63.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.17f1 (a4537701e4ab)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jbene/OneDrive/Documents/GitHub/General-Anesthesia-Simulator/GeneralAnesthesiaSimulator/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 940MX (ID=0x134d)
+    Vendor:   
+    VRAM:     2010 MB
+    Driver:   27.21.14.6280
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56968
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.007904 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 63.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.611 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2611ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (915ms)
+			LoadAssemblies (108ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (375ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (63ms)
+				BeforeProcessingInitializeOnLoad (18ms)
+				ProcessInitializeOnLoadAttributes (170ms)
+				ProcessInitializeOnLoadMethodAttributes (108ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009680 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.850 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2852ms)
+		BeginReloadAssembly (380ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (2293ms)
+			LoadAssemblies (221ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (696ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (135ms)
+			SetupLoadedEditorAssemblies (987ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (189ms)
+				ProcessInitializeOnLoadAttributes (750ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1397 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.4 MB.
+System memory in use after: 65.5 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1830.
+Total: 5.130100 ms (FindLiveObjects: 0.291300 ms CreateObjectMapping: 0.105900 ms MarkObjects: 4.607800 ms  DeleteObjects: 0.122200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenes
+  artifactKey: Guid(75d3616518ef362409e2ef214a7c6f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(75d3616518ef362409e2ef214a7c6f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7614ede39220eb783664f29dafcc49f7') in 0.016239 seconds 
+  Import took 0.021425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.700196 seconds.
+  path: Assets/Scenes/InputPLay.unity
+  artifactKey: Guid(b4c6a2f27b94a274e81fa30ac9af4428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/InputPLay.unity using Guid(b4c6a2f27b94a274e81fa30ac9af4428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17501bc88ec5bd2eb32723dc44f3f2c8') in 0.073115 seconds 
+  Import took 0.085547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.712803 seconds.
+  path: Assets/Scenes/InputPlayground.unity
+  artifactKey: Guid(b4c6a2f27b94a274e81fa30ac9af4428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/InputPlayground.unity using Guid(b4c6a2f27b94a274e81fa30ac9af4428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e6c250762dd589387d64554b9350d4') in 0.024700 seconds 
+  Import took 0.028847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 227.768638 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(7bb9adc3c25a200419ce5211ee1e4703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(7bb9adc3c25a200419ce5211ee1e4703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e46ba3a3344e6a66aa59bbac5b8326c2') in 0.022051 seconds 
+  Import took 0.026032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052833 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(7bb9adc3c25a200419ce5211ee1e4703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(7bb9adc3c25a200419ce5211ee1e4703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e46ba3a3344e6a66aa59bbac5b8326c2') in 0.014580 seconds 
+  Import took 0.018692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.441279 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8133fa05188e62971b8fb239a59b2c5c') in 0.078823 seconds 
+  Import took 0.082830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039527 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8133fa05188e62971b8fb239a59b2c5c') in 0.030243 seconds 
+  Import took 0.034196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.432586 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99396cb59b180f1a6cef298b211c0a77') in 0.026930 seconds 
+  Import took 0.031470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.417675 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f701654e934cd3be594ff48ef5594cc7') in 0.015378 seconds 
+  Import took 0.020749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.391358 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce3509a7084eda1cbc88355d8b877826') in 0.025691 seconds 
+  Import took 0.041472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.914606 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9681c0564803377dd239b043d07fcb00') in 0.042690 seconds 
+  Import took 0.064521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.021944 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7335ff816f42044714f01ce8abd26d7a') in 0.025032 seconds 
+  Import took 0.028998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.097881 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54e6414e1919318a8add36dc99293f4e') in 0.013352 seconds 
+  Import took 0.017653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.630730 seconds.
+  path: Assets/Prefabs/Anastehesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anastehesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceedddbb1a6ef767269de4b4718406db') in 0.016341 seconds 
+  Import took 0.020851 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.154286 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.220 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1221ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1006ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (317ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (422ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (335ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1391 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 65.3 MB.
+System memory in use after: 65.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1832.
+Total: 3.820600 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.056300 ms MarkObjects: 3.575000 ms  DeleteObjects: 0.023800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 79.762118 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763f38c5685316b5de211c67a56a8f66') in 0.038683 seconds 
+  Import took 0.041658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.058635 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '730a70da78f7dcb5b7f4f1462ab0a2dd') in 0.455263 seconds 
+  Import took 0.459390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.484595 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fe2ebc9dab51d386236117ebc9fa98d') in 0.047865 seconds 
+  Import took 0.052142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.984754 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a94b642158957cb2b4690dafb3b117') in 0.055128 seconds 
+  Import took 0.059009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.613899 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7245ecf8cf9f7bd7cfb6f43c2d577b95') in 0.044516 seconds 
+  Import took 0.049770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.804562 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9c0ea66af0cde8bd501fb0cb5a066d') in 0.052816 seconds 
+  Import took 0.057102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.922471 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b63de435c28259575a13e003d9b7d40') in 0.050488 seconds 
+  Import took 0.055300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.615050 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '944b05a9086e8092680f1e5cbf4bfe1e') in 0.048725 seconds 
+  Import took 0.053292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.135943 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fcf9e13663ab05ee5a205097cb7d9f4') in 0.042434 seconds 
+  Import took 0.058586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.416745 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2a0a62a0fe9ac73d90ecfc664aa9a17') in 0.043954 seconds 
+  Import took 0.047725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.932270 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7799633eda7c35811dd8246de3b9904c') in 0.041902 seconds 
+  Import took 0.053281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.697871 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397df8840dde0a65c73a9f063c29987a') in 0.080238 seconds 
+  Import took 0.093169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.145024 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7798987b24a7485837e30afa737b577') in 0.051362 seconds 
+  Import took 0.055729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.366018 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a8c1b4100da74f19fbd522cf624d3a1') in 0.037786 seconds 
+  Import took 0.043273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.784962 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9cb715ebdc99620e2cea1e18fbaa5f') in 0.060964 seconds 
+  Import took 0.064570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.678560 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da07ceaab67d2f6680c9de24d16ccc82') in 0.042402 seconds 
+  Import took 0.047760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.623034 seconds.
+  path: Assets/Prefabs/Anasthesiologist.prefab
+  artifactKey: Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Anasthesiologist.prefab using Guid(d0487d70afe732148baf57a38c6598c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9a34fd4c73acb769eb2fccf0bef22eb') in 0.053125 seconds 
+  Import took 0.056973 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006006 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.271 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1272ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1059ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (385ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (412ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (331ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1391 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.5 MB.
+System memory in use after: 68.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1842.
+Total: 3.633900 ms (FindLiveObjects: 0.235900 ms CreateObjectMapping: 0.088100 ms MarkObjects: 3.277100 ms  DeleteObjects: 0.031300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 519.397531 seconds.
+  path: Assets/New Folder
+  artifactKey: Guid(715d42e81f43ff84aabe1ba2b189a919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Folder using Guid(715d42e81f43ff84aabe1ba2b189a919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '560a18a3277ec08f4a0cb214b3fa6d6d') in 0.028960 seconds 
+  Import took 0.033794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000917 seconds.
+  path: Assets/New Folder
+  artifactKey: Guid(715d42e81f43ff84aabe1ba2b189a919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Folder using Guid(715d42e81f43ff84aabe1ba2b189a919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '560a18a3277ec08f4a0cb214b3fa6d6d') in 0.034444 seconds 
+  Import took 0.038453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.643113 seconds.
+  path: Assets/MaterialsTextures
+  artifactKey: Guid(715d42e81f43ff84aabe1ba2b189a919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MaterialsTextures using Guid(715d42e81f43ff84aabe1ba2b189a919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b87bda935930eb51e95ffb824e6d21c4') in 0.018471 seconds 
+  Import took 0.022544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.117818 seconds.
+  path: Assets/MaterialsTextures/New Material.mat
+  artifactKey: Guid(b3bbe9ed406e7d644bf58b400acee7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MaterialsTextures/New Material.mat using Guid(b3bbe9ed406e7d644bf58b400acee7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5440d55f854590032f216fb929656f06') in 0.228995 seconds 
+  Import took 0.235284 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011891 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.138 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1138ms)
+		BeginReloadAssembly (122ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (943ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (299ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (388ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (58ms)
+				ProcessInitializeOnLoadAttributes (306ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1391 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.7 MB.
+System memory in use after: 68.8 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1878.
+Total: 3.225300 ms (FindLiveObjects: 0.155100 ms CreateObjectMapping: 0.039000 ms MarkObjects: 3.010500 ms  DeleteObjects: 0.019800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 705.514671 seconds.
+  path: Assets/MaterialsTextures/New Material.mat
+  artifactKey: Guid(b3bbe9ed406e7d644bf58b400acee7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MaterialsTextures/New Material.mat using Guid(b3bbe9ed406e7d644bf58b400acee7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3199f2e4c3ddf8d787c5816a64a1741d') in 0.070247 seconds 
+  Import took 0.073762 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
