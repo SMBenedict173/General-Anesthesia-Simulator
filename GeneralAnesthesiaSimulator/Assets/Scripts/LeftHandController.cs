@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.InputSystem.Controls;
 
+[RequireComponent(typeof(ActionBasedController))]
 public class LeftHandController : MonoBehaviour, XRIDefaultInputActions.IXRILeftHandActions
 {
     [Tooltip("Hand associated with this controller")]
@@ -30,30 +31,17 @@ public class LeftHandController : MonoBehaviour, XRIDefaultInputActions.IXRILeft
     // Update is called once per frame
     void Update()
     {
-        if (isHolding)
-        {
-            AnimateGrab();
-        }
-        if (isPressing)
-        {
-            AnimatePress();
-        }
+        this.thisHand.SetGrip(controller.selectAction.action.ReadValue<float>());
+        this.thisHand.SetTrigger(controller.activateAction.action.ReadValue<float>());
+       
         if (isHolding && isPressing)
         {
-            //Not ready until Implement script is written SMB - 09/06/21
-            //interactor.selectTarget.gameObject.GetComponent<Implement>().isUsing = true;
+            //Not ready until Grippable script is written: SMB - 09/06/21
+            //interactor.selectTarget.gameObject.GetComponent<Grippable>().isUsing = true;
         }
     }
 
-    public void AnimateGrab()
-    {
-        this.thisHand.AnimateGrab();
-    }
-
-    public void AnimatePress()
-    {
-        this.thisHand.AnimatePress();
-    }
+    
 
     public void OnPosition(InputAction.CallbackContext context)
     {
@@ -136,6 +124,7 @@ public class LeftHandController : MonoBehaviour, XRIDefaultInputActions.IXRILeft
 
     public void OnSimulationPress(InputAction.CallbackContext context)
     {
+        this.thisHand.SetPress(context.ReadValue<float>());
         if (context.ReadValue<float>() > 0.4)
         {
             isPressing = true;
@@ -145,6 +134,4 @@ public class LeftHandController : MonoBehaviour, XRIDefaultInputActions.IXRILeft
             isPressing = false;
         }
     }
-
-
 }

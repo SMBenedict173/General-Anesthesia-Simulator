@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637663685265706884
-    m_Hash: 1210966323
+      ticks: 637669764816768325
+    m_Hash: 1080094896
   m_LockFileStatus:
     m_FilePath: C:/Users/jbene/OneDrive/Documents/GitHub/General-Anesthesia-Simulator/GeneralAnesthesiaSimulator/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637663685266251582
-    m_Hash: 3181859940
+      ticks: 637669764816867902
+    m_Hash: 4092298076
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
