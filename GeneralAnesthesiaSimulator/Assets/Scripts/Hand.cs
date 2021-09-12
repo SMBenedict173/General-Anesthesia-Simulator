@@ -54,6 +54,7 @@ public class Hand : MonoBehaviour
         if (currentGripPoint != gripTarget)
         {
             AnimateHold();
+            Debug.Log($"CurrentGripPoint: {currentGripPoint}");
         }
         if (currentTriggerPoint != triggerTarget)
         {

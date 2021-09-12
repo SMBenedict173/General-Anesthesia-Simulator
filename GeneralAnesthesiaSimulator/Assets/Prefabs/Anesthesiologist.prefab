@@ -491,7 +491,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1188069641512193558}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1188069641544641678}
   m_StartingSelectedInteractable: {fileID: 0}
   m_HoverEntered:
     m_PersistentCalls:
@@ -1374,6 +1374,25 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 1188069641075127228}
   m_MinHeight: 1
   m_MaxHeight: 2
+--- !u!95 &2551033852177331251
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071012453670262485}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1188069642176834440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,7 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c34a01ae12eb8245936e4c4d4aac9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4690018123840001557}
+  animator: {fileID: 0}
   AnimationDelta: 10
 --- !u!95 &1188069642105787126
 Animator:
@@ -2725,10 +2744,5 @@ GameObject:
 --- !u!4 &1726680164149841007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 69fbdad6e742b0e418f8120a15924ca4, type: 3}
-  m_PrefabInstance: {fileID: 1188069642176834436}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &4690018123840001557 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 69fbdad6e742b0e418f8120a15924ca4, type: 3}
   m_PrefabInstance: {fileID: 1188069642176834436}
   m_PrefabAsset: {fileID: 0}
