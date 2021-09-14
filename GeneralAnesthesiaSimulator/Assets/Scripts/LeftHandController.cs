@@ -17,21 +17,23 @@ public class LeftHandController : MonoBehaviour//, XRIDefaultInputActions.IXRILe
     public UnityAction grabInput;
     public bool isHolding;
 
-    private XRRayInteractor interactor;
+    private XRDirectInteractor interactor;
     private bool isPressing;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = gameObject.GetComponent<ActionBasedController>();
-        interactor = gameObject.GetComponent<XRRayInteractor>();
+        interactor = gameObject.GetComponent<XRDirectInteractor>();
+        this.thisHand = gameObject.GetComponentInChildren<Hand>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         this.thisHand.SetGrip(controller.selectAction.action.ReadValue<float>());
-        //Debug.Log(controller.selectAction.action.ReadValue<float>());
+        
         this.thisHand.SetTrigger(controller.activateAction.action.ReadValue<float>());
        
         if (isHolding && isPressing)
@@ -41,16 +43,16 @@ public class LeftHandController : MonoBehaviour//, XRIDefaultInputActions.IXRILe
         }
     }
 
-    
+
 
     //public void OnPosition(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnRotation(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnSelect(InputAction.CallbackContext context)
@@ -86,42 +88,42 @@ public class LeftHandController : MonoBehaviour//, XRIDefaultInputActions.IXRILe
 
     //public void OnHapticDevice(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnTeleportSelect(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnTeleportModeActivate(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnTeleportModeCancel(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnTurn(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnMove(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnRotateAnchor(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnTranslateAnchor(InputAction.CallbackContext context)
     //{
-        
+
     //}
 
     //public void OnSimulationPress(InputAction.CallbackContext context)

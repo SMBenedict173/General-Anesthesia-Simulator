@@ -24,7 +24,7 @@ public class Hand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //animator = this.GetComponent<Animator>(); Only necessary if not assigned in inspector
+        animator = this.GetComponent<Animator>();// Only necessary if not assigned in inspector
         
     }
 

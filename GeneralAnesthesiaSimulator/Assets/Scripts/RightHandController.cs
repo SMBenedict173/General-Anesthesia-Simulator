@@ -17,19 +17,21 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
     public UnityAction grabInput;
     public bool isHolding;
 
-    private XRRayInteractor interactor;
+    private XRDirectInteractor interactor;
     private bool isPressing;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = gameObject.GetComponent<ActionBasedController>();
-        interactor = gameObject.GetComponent<XRRayInteractor>();
+        interactor = gameObject.GetComponent<XRDirectInteractor>();
+        thisHand = gameObject.GetComponentInChildren(typeof(Hand)) as Hand;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(controller.selectAction.action.ReadValue<float>());
         this.thisHand.SetGrip(controller.selectAction.action.ReadValue<float>());
         this.thisHand.SetTrigger(controller.activateAction.action.ReadValue<float>());
 
