@@ -6,13 +6,15 @@ public class HoverHighlight : MonoBehaviour
     public Light Halo;
     public float MaximumIntensity;
 
-    public float IntensityDelta;
-    private float CurrentIntensity;
+    private float IntensityDelta;
+    //private float CurrentIntensity;
+
+    public int SmoothingFactor;
     // Start is called before the first frame update
     void Start()
     {
-        CurrentIntensity = 0F;
-        Halo.intensity = CurrentIntensity;
+        IntensityDelta = MaximumIntensity / (float)SmoothingFactor;
+        Halo.intensity = 0F;
     }
 
     // Update is called once per frame
@@ -23,19 +25,23 @@ public class HoverHighlight : MonoBehaviour
 
     public void EnableHighlight()
     {
-        while(CurrentIntensity < MaximumIntensity)
+        for (int i = 0; i < SmoothingFactor; i++)
         {
-            CurrentIntensity = Mathf.MoveTowards(CurrentIntensity, MaximumIntensity, Time.time * IntensityDelta);
-            Halo.intensity = CurrentIntensity;
+            Halo.intensity += IntensityDelta;
         }
+
+        //while(CurrentIntensity < MaximumIntensity)
+        //{
+        //    CurrentIntensity = Mathf.MoveTowards(CurrentIntensity, MaximumIntensity, Time.time * IntensityDelta);
+        //    Halo.intensity = CurrentIntensity;
+        //}
     }
 
     public void DisableHighlight()
     {
-        while (CurrentIntensity > 0F)
+        for (int i = 0; i < SmoothingFactor; i++)
         {
-            CurrentIntensity = Mathf.MoveTowards(CurrentIntensity, 0F, Time.time * IntensityDelta);
-            Halo.intensity = CurrentIntensity;
+            Halo.intensity -= IntensityDelta;
         }
     }
 }

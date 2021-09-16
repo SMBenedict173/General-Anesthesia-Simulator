@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 1188069641857841324}
   - component: {fileID: 1188069641857841327}
   - component: {fileID: 1188069641857841326}
-  - component: {fileID: 3515582198377427114}
+  - component: {fileID: 6599537632057560107}
   m_Layer: 0
   m_Name: Anesthesiologist
   m_TagString: Untagged
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_RigBaseGameObject: {fileID: 1188069641857841322}
   m_CameraFloorOffsetObject: {fileID: 1188069640112725547}
   m_CameraGameObject: {fileID: 1188069641240242287}
-  m_RequestedTrackingOriginMode: 2
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.36144
   m_TrackingSpace: 3
   m_TrackingOriginMode: -2147483648
@@ -1011,9 +1011,9 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_Height: 1.5
+  m_Radius: 0.2
+  m_SlopeLimit: 30
   m_StepOffset: 0.6
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -1033,7 +1033,7 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 1188069641075127228}
   m_MinHeight: 1
   m_MaxHeight: 2
---- !u!54 &3515582198377427114
+--- !u!54 &6599537632057560107
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1041,7 +1041,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188069641857841322}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1132,6 +1132,10 @@ PrefabInstance:
     - target: {fileID: 5855453658029384218, guid: 707873e8801a735469788373cb3b7b8b, type: 3}
       propertyPath: m_Name
       value: RightHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364237589647733896, guid: 707873e8801a735469788373cb3b7b8b, type: 3}
+      propertyPath: AnimationDelta
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6487735123065845920, guid: 707873e8801a735469788373cb3b7b8b, type: 3}
       propertyPath: m_RootOrder
