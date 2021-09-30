@@ -170,7 +170,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""SimulationPress"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""2cab3353-57db-41de-9bd6-bd85407caac0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -631,7 +631,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""SimulationPress"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""5bd345f5-58c3-42ad-82b6-5bb76a230267"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",

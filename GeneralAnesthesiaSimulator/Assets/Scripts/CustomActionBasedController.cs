@@ -13,10 +13,7 @@ public class CustomActionBasedController : ActionBasedController
 {
     [SerializeField]
     public InputActionProperty m_SimulationPressAction;
-    /// <summary>
-    /// The Input System action to use for translating the interactor's attach point closer or further away from the interactor.
-    /// Must be a <see cref="Vector2Control"/> Control. Will use the Y-axis as the translation input.
-    /// </summary>
+    
     public InputActionProperty simulationPressAction
     {
         get => m_SimulationPressAction;
