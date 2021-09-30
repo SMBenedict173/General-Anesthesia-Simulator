@@ -7,23 +7,22 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.InputSystem.Controls; 
 
-[RequireComponent(typeof(ActionBasedController))]
-public class LeftHandController : MonoBehaviour//, XRIDefaultInputActions.IXRILeftHandActions
+[RequireComponent(typeof(CustomActionBasedController))]
+public class LeftHandController : MonoBehaviour, XRIDefaultInputActions.IXRILeftHandActions
 {
     [Tooltip("Hand associated with this controller")]
     public Hand thisHand;
-    public ActionBasedController controller;
+    public CustomActionBasedController controller;
 
-    public UnityAction grabInput;
-    public bool isHolding;
+    private bool isHolding;
 
-    private XRDirectInteractor interactor;
-    private bool isPressing;
+    public XRDirectInteractor interactor;
+    private bool isActivating;
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = gameObject.GetComponent<ActionBasedController>();
+        controller = gameObject.GetComponent<CustomActionBasedController>();
         interactor = gameObject.GetComponent<XRDirectInteractor>();
         this.thisHand = gameObject.GetComponentInChildren<Hand>();
     }
@@ -35,8 +34,9 @@ public class LeftHandController : MonoBehaviour//, XRIDefaultInputActions.IXRILe
         this.thisHand.SetGrip(controller.selectAction.action.ReadValue<float>());
         
         this.thisHand.SetTrigger(controller.activateAction.action.ReadValue<float>());
-       
-        if (isHolding && isPressing)
+        this.thisHand.SetPress(controller.simulationPressAction.ReadValue<float>());
+
+        if (isHolding && isActivating)
         {
             //Not ready until Grippable script is written: SMB - 09/06/21
             //interactor.selectTarget.gameObject.GetComponent<Grippable>().isUsing = true;
@@ -45,98 +45,90 @@ public class LeftHandController : MonoBehaviour//, XRIDefaultInputActions.IXRILe
 
 
 
-    //public void OnPosition(InputAction.CallbackContext context)
-    //{
+    public void OnPosition(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnRotation(InputAction.CallbackContext context)
-    //{
+    public void OnRotation(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnSelect(InputAction.CallbackContext context)
-    //{
-    //    Debug.Log(context.ReadValue<float>());
-    //    if (context.ReadValue<float>() > 0.4)
-    //    {
-    //        isHolding = true;
-    //    }
-    //    else
-    //    {
-    //        isHolding = false;
-    //    }
-    //}
+    public void OnSelect(InputAction.CallbackContext context)
+    {
+        //Debug.Log(context.ReadValue<float>());
+        //if (context.ReadValue<float>() > 0.4)
+        //{
+        //    isHolding = true;
+        //}
+        //else
+        //{
+        //    isHolding = false;
+        //}
+    }
 
-    //public void OnActivate(InputAction.CallbackContext context)
-    //{
-    //    if (context.ReadValue<float>() > 0.4)
-    //    {
-    //        Debug.Log(context.ReadValue<float>());
-    //        isHolding = true;
-    //    }
-    //    else
-    //    {
-    //        isHolding = false;
-    //    }
-    //}
+    public void OnActivate(InputAction.CallbackContext context)
+    {
+        //if (context.ReadValue<float>() > 0.4)
+        //{
+        //    Debug.Log(context.ReadValue<float>());
+        //    isHolding = true;
+        //}
+        //else
+        //{
+        //    isHolding = false;
+        //}
+    }
 
-    //public void OnUIPress(InputAction.CallbackContext context)
-    //{
-    //    //Probably useful if we implement a pause menu
-    //}
+    public void OnUIPress(InputAction.CallbackContext context)
+    {
+        //Probably useful if we implement a pause menu
+    }
 
-    //public void OnHapticDevice(InputAction.CallbackContext context)
-    //{
+    public void OnHapticDevice(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnTeleportSelect(InputAction.CallbackContext context)
-    //{
+    public void OnTeleportSelect(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnTeleportModeActivate(InputAction.CallbackContext context)
-    //{
+    public void OnTeleportModeActivate(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnTeleportModeCancel(InputAction.CallbackContext context)
-    //{
+    public void OnTeleportModeCancel(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnTurn(InputAction.CallbackContext context)
-    //{
+    public void OnTurn(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnMove(InputAction.CallbackContext context)
-    //{
+    public void OnMove(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnRotateAnchor(InputAction.CallbackContext context)
-    //{
+    public void OnRotateAnchor(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnTranslateAnchor(InputAction.CallbackContext context)
-    //{
+    public void OnTranslateAnchor(InputAction.CallbackContext context)
+    {
 
-    //}
+    }
 
-    //public void OnSimulationPress(InputAction.CallbackContext context)
-    //{
-    //    this.thisHand.SetPress(context.ReadValue<float>());
-    //    Debug.Log($"PressInput: {context.ReadValue<float>()}");
-    //    if (context.ReadValue<float>() > 0.4)
-    //    {
-    //        isPressing = true;
-    //    }
-    //    else
-    //    {
-    //        isPressing = false;
-    //    }
-    //}
+    public void OnSimulationPress(InputAction.CallbackContext context)
+    {
+        this.thisHand.SetPress(context.ReadValue<float>());
+        Debug.Log($"PressInput: {context.ReadValue<float>()}");
+    }
 }

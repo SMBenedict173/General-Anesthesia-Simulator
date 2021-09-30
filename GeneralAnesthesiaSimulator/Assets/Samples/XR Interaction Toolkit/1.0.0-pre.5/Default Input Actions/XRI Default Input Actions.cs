@@ -184,7 +184,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<XRController>{LeftHand}/triggerPressed"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Generic XR Controller"",
+                    ""groups"": ""Generic XR Controller;Continuous Move"",
                     ""action"": ""UI Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -807,10 +807,10 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""92bb5b8f-bf48-4dab-af05-50a865773895"",
-                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
+                    ""path"": ""<XRController>{LeftHand}/triggerPressed"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Generic XR Controller"",
+                    ""groups"": ""Generic XR Controller;Continuous Move"",
                     ""action"": ""UI Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
