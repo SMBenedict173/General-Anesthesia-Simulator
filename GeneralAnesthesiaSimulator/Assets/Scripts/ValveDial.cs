@@ -5,8 +5,8 @@ public class ValveDial : Grippable, IToggleable
 {
     [Tooltip("Animator")]
     public Animator animator;
-    public float OffRotation;
-    public float OnRotation;
+    public float OffRotation = 1;
+    public float OnRotation = 1;
     private float currentRotation;
     private float targetRotation;
 

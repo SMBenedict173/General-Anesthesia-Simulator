@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 427759062}
   - component: {fileID: 427759061}
   - component: {fileID: 427759060}
+  - component: {fileID: 427759068}
   m_Layer: 0
   m_Name: Dial
   m_TagString: Untagged
@@ -264,8 +265,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisTransform: {fileID: 427759059}
   IsActivated: 0
+  animator: {fileID: 0}
   OffRotation: 0
   OnRotation: 180
+  AnimationDelta: 0
 --- !u!114 &427759063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +502,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427759058}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &427759068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427759058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87dc0ede287db5e439b038a68a8bff20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &486070633
 GameObject:
   m_ObjectHideFlags: 0
