@@ -14,7 +14,8 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
     public Hand thisHand;
     public ActionBasedController controller;
 
-    public UnityAction grabInput;
+    [SerializeField]
+    private InputActionReference simulationPressAction;
     public bool isHolding;
 
     private XRDirectInteractor interactor;
@@ -23,9 +24,7 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
     // Start is called before the first frame update
     void Start()
     {
-        controller = gameObject.GetComponent<ActionBasedController>();
-        interactor = gameObject.GetComponent<XRDirectInteractor>();
-        thisHand = gameObject.GetComponentInChildren(typeof(Hand)) as Hand;
+        
     }
 
     // Update is called once per frame
@@ -66,99 +65,7 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
             }
             
         }
+
+        this.thisHand.SetPress(simulationPressAction.action.ReadValue<float>());
     }
-
-
-
-    //public void OnPosition(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnRotation(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnSelect(InputAction.CallbackContext context)
-    //{
-    //    if (context.ReadValue<float>() > 0.4)
-    //    {
-    //        isHolding = true;
-    //    }
-    //    else
-    //    {
-    //        isHolding = false;
-    //    }
-    //}
-
-    //public void OnActivate(InputAction.CallbackContext context)
-    //{
-    //    if (context.ReadValue<float>() > 0.4)
-    //    {
-    //        isHolding = true;
-    //    }
-    //    else
-    //    {
-    //        isHolding = false;
-    //    }
-    //}
-
-    //public void OnUIPress(InputAction.CallbackContext context)
-    //{
-    //    //Probably useful if we implement a pause menu
-    //}
-
-    //public void OnHapticDevice(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnTeleportSelect(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnTeleportModeActivate(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnTeleportModeCancel(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnTurn(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnMove(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnRotateAnchor(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnTranslateAnchor(InputAction.CallbackContext context)
-    //{
-
-    //}
-
-    //public void OnSimulationPress(InputAction.CallbackContext context)
-    //{
-    //    this.thisHand.SetPress(context.ReadValue<float>());
-    //    if (context.ReadValue<float>() > 0.4)
-    //    {
-    //        isPressing = true;
-    //    }
-    //    else
-    //    {
-    //        isPressing = false;
-    //    }
-    //}
 }
