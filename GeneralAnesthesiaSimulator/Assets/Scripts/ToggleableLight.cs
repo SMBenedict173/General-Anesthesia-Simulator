@@ -20,7 +20,6 @@ public class ToggleableLight : MonoBehaviour, IToggleable
 
     void Update()
     {
-        
 
     }
 

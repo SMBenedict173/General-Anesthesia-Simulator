@@ -64,18 +64,6 @@ public class LeftHandController : MonoBehaviour//, XRIDefaultInputActions.IXRILe
             {
                 thisHand.transform.SetParent(heldDial.transform, false);
             }
-            ////try
-            ////{
-            ////    ValveDial heldDial = interactor.selectTarget.gameObject.GetComponent<ValveDial>();
-            //      thisHand.thisHand.gameObject.transform.setParent(heldDial.gameObject);
-            ////}
-            //Not ready until Grippable script is written:P SMB - 09/06/21
-            //
-        }
-
-        if (isHolding && isPressing)
-        {
-            interactor.selectTarget.gameObject.GetComponent<Grippable>().Activate();
         }
     }
 

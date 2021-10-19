@@ -16,13 +16,7 @@ public abstract class Grippable : MonoBehaviour
         IsActivated = false;
     }
 
-    public void Activate()
-    {
-        IsActivated = true;
-    }
+    //public abstract void Activate();
 
-    public void Deactivate()
-    {
-        IsActivated = false;
-    }
+    //public abstract void Deactivate();
 }

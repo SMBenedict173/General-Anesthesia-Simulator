@@ -3,48 +3,43 @@ using UnityEngine;
 
 public class ValveDial : Grippable, IToggleable
 {
-    [Tooltip("Animator")]
-    public Animator animator;
     public float OffRotation;
     public float OnRotation;
-    private float currentRotation;
     private float targetRotation;
 
-    private string rotateAnimationParameter = "Rotate";
     public float AnimationDelta;
 	void Update()
     {
-        //Attempt without using animations
-        //if (IsActivated && currentRotation == OffRotation)
-        //{
-        //    ThisTransform.rotation.Set(0, OnRotation, 0, 0);
-        //    currentRotation = OnRotation;
-        //}
-        //else if (!IsActivated && currentRotation == OnRotation)
-        //{
-        //    ThisTransform.rotation.Set(0, OffRotation, 0, 0);
-        //    currentRotation = OnRotation;
-        //}
-
-        //Attempt using animations...Requires all dials and valves to have animations
-        if (currentRotation != targetRotation)
-        {
-            currentRotation = Mathf.MoveTowards(currentRotation, targetRotation, Time.time * AnimationDelta);
-            animator.SetFloat(rotateAnimationParameter, currentRotation);
-        }
+        Quaternion newRotation = Quaternion.Euler(0, targetRotation, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * AnimationDelta);
     }
      
+
+    private void Deactivate()
+    {
+        IsActivated = false;
+        targetRotation = OffRotation;
+    }
+
+    private void Activate()
+    {
+        IsActivated = true;
+        targetRotation = OnRotation;
+    }
+    
     public void ToggleActivation()
     {
-        if (IsActivated)
+        bool previousActivationStatus = IsActivated;
+        if (!previousActivationStatus)
         {
-            IsActivated = false;
-            targetRotation = OffRotation;
+            Activate();
+            
         }
-        else
+        
+        if (previousActivationStatus)
         {
-            IsActivated = true;
-            targetRotation = OnRotation;
+            Deactivate();
+            
         }
     }
 }
