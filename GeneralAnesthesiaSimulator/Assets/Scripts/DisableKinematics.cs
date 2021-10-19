@@ -20,7 +20,7 @@ public class DisableKinematics : MonoBehaviour
         
     }
 
-    public void DisablKinematicProperty()
+    public void DisableKinematicProperty()
     {
         rigid.isKinematic = false;
         Collider.enabled = true;
