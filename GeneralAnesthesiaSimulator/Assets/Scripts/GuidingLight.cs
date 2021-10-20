@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Light))]
-public class HoverHighlight : MonoBehaviour
+public class GuidingLight : MonoBehaviour
 {
     public Light Halo;
     public float MaximumIntensity;
