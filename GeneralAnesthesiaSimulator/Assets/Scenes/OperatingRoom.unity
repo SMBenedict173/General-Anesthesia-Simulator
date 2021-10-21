@@ -864,6 +864,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8990369204087863388, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_line_pressure_dial_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -8764077512085610462, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: bottom_panel
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -908,17 +916,609 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8462709953001013040, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: top_drawer_front
+      objectReference: {fileID: 0}
+    - target: {fileID: -8204880374533385131, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_knob_lower_right_notch
+      objectReference: {fileID: 0}
+    - target: {fileID: -8157789941167229144, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_right_left_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: -8138737200886540113, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_right_right_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: -8123216724436306151, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_knob_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: -7876394836660962231, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: special_setting_line
+      objectReference: {fileID: 0}
     - target: {fileID: -7862391691550088030, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
       propertyPath: m_Name
-      value: Box0002
+      value: bottom_front_right_panel
+      objectReference: {fileID: 0}
+    - target: {fileID: -7794092838361311402, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_cylinder_pressure_dial
+      objectReference: {fileID: 0}
+    - target: {fileID: -7780066210683076552, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module
       objectReference: {fileID: 0}
     - target: {fileID: -7639331209684527813, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
       propertyPath: m_Name
-      value: box0003
+      value: bottom_front_left_panel
+      objectReference: {fileID: 0}
+    - target: {fileID: -7619015397531516556, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: on_button_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: -7567606629468105249, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n20_left_flowmeter_color
+      objectReference: {fileID: 0}
+    - target: {fileID: -7556275672212240162, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_tray_front
+      objectReference: {fileID: 0}
+    - target: {fileID: -7547988612322845313, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_left_wheel_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: -7334401699074844857, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: child_setting_line
+      objectReference: {fileID: 0}
+    - target: {fileID: -7289679287056473162, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_12
+      objectReference: {fileID: 0}
+    - target: {fileID: -7156978428245642705, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_wheel_leg_bar
+      objectReference: {fileID: 0}
+    - target: {fileID: -7145158041009352910, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: purple_cylinder_top
+      objectReference: {fileID: 0}
+    - target: {fileID: -6799787392615277207, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_left_left_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: -6714545642603840610, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_knob
+      objectReference: {fileID: 0}
+    - target: {fileID: -6676117596650526484, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_screen
+      objectReference: {fileID: 0}
+    - target: {fileID: -6667345438059886826, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_right_wheel_brake
+      objectReference: {fileID: 0}
+    - target: {fileID: -6561815936685080706, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_knob
+      objectReference: {fileID: 0}
+    - target: {fileID: -6468719678675947214, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_right_left_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: -6464652307927150098, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_line_pressure_dial
+      objectReference: {fileID: 0}
+    - target: {fileID: -6424696975218040852, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: top_front_bar
+      objectReference: {fileID: 0}
+    - target: {fileID: -6422537612630968183, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_left_left_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: -6334522115669559555, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_tray
+      objectReference: {fileID: 0}
+    - target: {fileID: -6279087277881825844, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_right_flowmeter_color
+      objectReference: {fileID: 0}
+    - target: {fileID: -6259394229245440784, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_flowmeter_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -6177509979527109023, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_left_wheel_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: -6037787492069079482, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5921505478000457673, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: bottom_back_panel
+      objectReference: {fileID: 0}
+    - target: {fileID: -5707490691097569201, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: top_machine
+      objectReference: {fileID: 0}
+    - target: {fileID: -5453070723975637521, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_knob_lower_left_notch
+      objectReference: {fileID: 0}
+    - target: {fileID: -5371869996505673154, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_right_right_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: -5346266578335681281, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_flowmeter_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -5309229520983438335, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_machine_connector_screw_to_main_bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: -5284670569195929019, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: pregnant_setting_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -5068358547790020021, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_rigth_flowmeter_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: -5055287162318514738, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_left_wheel_brake
+      objectReference: {fileID: 0}
+    - target: {fileID: -4856336772789610261, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: bottom_front_bar
+      objectReference: {fileID: 0}
+    - target: {fileID: -4807039575851968714, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: child_setting_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -4416568882675808140, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_right_wheel_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: -4366659997774951492, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_flowermeter_knob_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -4275852366765788601, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_machine_connector_joint
+      objectReference: {fileID: 0}
+    - target: {fileID: -4123292429646024344, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_left_flowmeter_color
+      objectReference: {fileID: 0}
+    - target: {fileID: -4085215362465382409, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_cylinder_pressure_dial_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -3576714213609786839, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_right_left_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: -3497425929664469501, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_left_flowmeter_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: -3451341421632711281, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: special_setting_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -3347878535258537322, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: on_button_outline
+      objectReference: {fileID: 0}
+    - target: {fileID: -3316875923572748131, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: off_indicator_light
+      objectReference: {fileID: 0}
+    - target: {fileID: -3219667987162777922, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_right_flowmeter_color
+      objectReference: {fileID: 0}
+    - target: {fileID: -3140963133903121732, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: yellow_cylinder_knob
+      objectReference: {fileID: 0}
+    - target: {fileID: -3068240195741245191, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: bottom_front_top_panel
+      objectReference: {fileID: 0}
+    - target: {fileID: -2917118976797415121, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_left_wheel_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -2735979304977574407, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: yellow_cylinder_knob_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -2722376652037355572, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_left_left_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: -2689783927164899718, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_knob_front
+      objectReference: {fileID: 0}
+    - target: {fileID: -2383385220863786025, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_right_flowmeter_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: -2097218277451053535, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_right_wheel_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: -2087962308158495216, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: right_tray_back_bar
+      objectReference: {fileID: 0}
+    - target: {fileID: -2055229545970525513, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_left_left_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: -1968768864359747925, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_cylinder_pressure_dial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1916899210259106318, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: middle_drawer_front
+      objectReference: {fileID: 0}
+    - target: {fileID: -1809278360469723325, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_machine_connector_arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -1616912010811020984, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: yellow_cylinder_body
+      objectReference: {fileID: 0}
+    - target: {fileID: -1611644270237827686, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_knob_upper_right_notch
+      objectReference: {fileID: 0}
+    - target: {fileID: -1462559468418490457, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_line_pressure_dial
+      objectReference: {fileID: 0}
+    - target: {fileID: -1407613393624037215, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: adult_setting_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -1407274133769243438, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_left_flowmeter_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: -1361466933073568924, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_right_left_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: -1340784564810384053, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_right_flowmeter_color
+      objectReference: {fileID: 0}
+    - target: {fileID: -1306053630595845998, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_flowmeter_knob_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -1217146082336166546, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1137061555384452385, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_line_pressure_dial_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -1014268425052216762, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: on_button
+      objectReference: {fileID: 0}
+    - target: {fileID: -988386184137323063, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: yellow_cylinder_bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: -954441968409914631, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_flowmeter_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -933358720466980185, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_machine_outline
+      objectReference: {fileID: 0}
+    - target: {fileID: -914624662024409502, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_right_wheel_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -887038784285709125, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: line_pressure_dial_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -884236584058637453, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: med_gas_flowmeters
+      objectReference: {fileID: 0}
+    - target: {fileID: -820976459212405795, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: setting_knob
+      objectReference: {fileID: 0}
+    - target: {fileID: -775160800121404021, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: off_indicator_light_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -607187789394015981, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: adult_setting_line
+      objectReference: {fileID: 0}
+    - target: {fileID: -584413233861867849, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: bottom_cart
+      objectReference: {fileID: 0}
+    - target: {fileID: -542385035649889481, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_11
+      objectReference: {fileID: 0}
+    - target: {fileID: -316616862632707561, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: pregnant_setting_line
+      objectReference: {fileID: 0}
+    - target: {fileID: -304876638058187421, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_flowmeter_knob_label
+      objectReference: {fileID: 0}
+    - target: {fileID: -51345898664742249, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_left_flowmeter_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: -7886553621178052, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 49764068215396203, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: right_tray
+      objectReference: {fileID: 0}
+    - target: {fileID: 52361805505633545, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: bottom_drawer_front
+      objectReference: {fileID: 0}
+    - target: {fileID: 241166916348683619, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 260736020425281067, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: cylinder_pressure_dial_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 422128399842248875, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: yellow_cylinder_top
+      objectReference: {fileID: 0}
+    - target: {fileID: 487459384268300218, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_knob
+      objectReference: {fileID: 0}
+    - target: {fileID: 496588809085960997, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_knob_upper_left_notch
+      objectReference: {fileID: 0}
+    - target: {fileID: 779712846928409611, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: halothane_cylinder_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 874039895501286339, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: yellow_cylinder_label_holder
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
       propertyPath: m_Name
       value: fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 989820036314746074, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_right_right_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1550612116741059217, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_right_wheel_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579157026754965318, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932394896836367561, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180879194176489915, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_left_right_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300593632408891413, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: top_front_bar_left_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372101842476191254, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_knob_top_notch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532974671802585133, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_rigth_wheel_brake
+      objectReference: {fileID: 0}
+    - target: {fileID: 2552076367181499698, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_machine_connector_screw_to_main_top
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615222133938989297, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: center_tray
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718173970522940675, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_machine_front_panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965636421288774775, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: purple_cylinder_knob_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181469538400302283, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_cylinder_pressure_dial_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324061434461330563, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: setting_knob_indicator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551153686280867055, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: yellow_cylinder_top
+      objectReference: {fileID: 0}
+    - target: {fileID: 3596676282447396315, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_right_right_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672233709214915547, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764337995928963850, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_line_pressure_dial
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790454241449052122, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: on_indicator_light
+      objectReference: {fileID: 0}
+    - target: {fileID: 4117768985574711843, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: left_machine_connector_screw_to_main
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603337159546281427, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: top_front_bar_right_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610609447743062514, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_left_right_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695380879102333098, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: gas_module_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762933125113609420, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_left_wheel_leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804853416078053747, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_left_flowmeter_color
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893887815874013019, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: purple_cylinder_bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075538211116365620, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217434830972621034, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_left_right_wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264415798941838902, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: purple_cylinder_knob
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277410180676272520, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: sevoflurane_cylinder_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639971979702520442, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_right_flowmeter_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769370776131136003, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: back_left_right_wheel_cover
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986540600011335320, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_knob
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238801738934646364, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: o2_line_pressure_dial_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486730366176838054, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: front_left_wheel_brake
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678252095284309158, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: on_indicator_light_label
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719895764214928177, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076590467822531996, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: purple_cylinder_body
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120277114046323282, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: n2o_knob_front
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433612771664773294, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: air_knob_front
+      objectReference: {fileID: 0}
+    - target: {fileID: 7541233798340275510, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: purple_cylinder_label_holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791787701375805059, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913384361426683629, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173085039283917401, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8191511442857552175, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: purple_cylinder_top
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487167654232718067, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: right_tray_front_bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887844078590861158, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: main_machine_screw_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125750224511326099, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: top_panel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
