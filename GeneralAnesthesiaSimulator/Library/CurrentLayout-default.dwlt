@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 128
+  controlID: 103
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 40
+  controlID: 112
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 41
+  controlID: 113
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -680,22 +680,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jbene\OneDrive\Documents\GitHub\General-Anesthesia-Simulator\GeneralAnesthesiaSimulator
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: 70510000
-    m_LastClickedID: 20848
-    m_ExpandedIDs: 000000007051000000ca9a3b
+    m_SelectedIDs: a4510000
+    m_LastClickedID: 20900
+    m_ExpandedIDs: 000000009851000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -723,7 +723,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070510000
+    m_ExpandedIDs: 0000000098510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000fc4c000014420000cc4200000c4500007062000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -844,9 +844,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 22faffff
-      m_LastClickedID: -1502
-      m_ExpandedIDs: 4afbffff4cfbffff
+      m_SelectedIDs: 34520000
+      m_LastClickedID: 21044
+      m_ExpandedIDs: 9af0ffff0c52000040520000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -898,17 +898,17 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 3a05a47bc5ff6d7419e10427dc263c36
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
+  m_OverrideSceneCullingMask: 0
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.099248, y: -12.816092, z: 0.8662462}
+    m_Target: {x: 0.6840941, y: 1.5753497, z: 0.5873724}
     speed: 2
-    m_Value: {x: 0.099248, y: -12.816092, z: 0.8662462}
+    m_Value: {x: 0.6840941, y: 1.5753497, z: 0.5873724}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -955,13 +955,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.6295689, y: 0.022355366, z: -0.018171022, w: 0.7764527}
+    m_Target: {x: 0.16011864, y: 0.00622523, z: -0.0010437036, w: 0.9871115}
     speed: 2
-    m_Value: {x: -0.6295689, y: -0.022355365, z: 0.01817102, w: -0.7764527}
+    m_Value: {x: 0.62954825, y: 0.022354634, z: -0.018170426, w: 0.77642727}
   m_Size:
-    m_Target: 8.8211975
+    m_Target: 0.36350018
     speed: 2
-    m_Value: 8.8211975
+    m_Value: 0.36350018
   m_Ortho:
     m_Target: 0
     speed: 2
