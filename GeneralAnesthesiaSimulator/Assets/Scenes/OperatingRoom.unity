@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -803,6 +803,10 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1188069641075127228, guid: 6d64c522c7df56743a650691f74757c7, type: 3}
+      propertyPath: m_LeftHandMoveAction.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1188069641857841322, guid: 6d64c522c7df56743a650691f74757c7, type: 3}
       propertyPath: m_Name
       value: Anesthesiologist
@@ -907,6 +911,14 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7862391691550088030, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: Box0002
+      objectReference: {fileID: 0}
+    - target: {fileID: -7639331209684527813, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
+      propertyPath: m_Name
+      value: box0003
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0543acfa12b4029479fa647bc9d0298a, type: 3}
       propertyPath: m_Name
