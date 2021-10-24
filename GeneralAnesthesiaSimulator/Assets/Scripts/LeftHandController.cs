@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.InputSystem.Controls; 
 
 [RequireComponent(typeof(ActionBasedController))]
 public class LeftHandController : MonoBehaviour
@@ -16,6 +11,11 @@ public class LeftHandController : MonoBehaviour
 
     [SerializeField]
     private InputActionReference simulationPressAction;
+    [SerializeField]
+    private InputActionReference openMenu;
+
+    [SerializeField]
+    public MenuManager menuManager;
     public bool isHolding;
 
     private XRDirectInteractor interactor;
@@ -32,6 +32,15 @@ public class LeftHandController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool menuInputValue = openMenu.action.ReadValue<bool>();
+        if (menuManager.IsMenuOpen && menuInputValue)
+        {
+            menuManager.CloseMenu();
+        }
+        else if (!menuManager.IsMenuOpen && menuInputValue)
+        {
+            menuManager.OpenMenu();
+        }
         float selectInputValue = controller.selectAction.action.ReadValue<float>();
         this.thisHand.SetGrip(selectInputValue);
         if (selectInputValue > 0.4 && interactor.selectTarget != null)

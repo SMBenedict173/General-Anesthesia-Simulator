@@ -1,12 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.InputSystem.Controls;
-using System;
 
 public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIRightHandActions
 {
