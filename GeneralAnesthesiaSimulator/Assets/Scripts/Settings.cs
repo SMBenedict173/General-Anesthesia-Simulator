@@ -1,8 +1,9 @@
-﻿using UnityEngine.UIElements;
+﻿using UnityEngine.UI;
+using UnityEngine;
+using UnityEditor;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.Json;
 
 public class Settings : MonoBehaviour
 {
@@ -14,34 +15,34 @@ public class Settings : MonoBehaviour
 	[Header("Menu Inputs")]
 	public Slider VolumeSlider;
 	public Slider BrightnessSlider;
-	public SliderInt TextSizeSlider;
+	public Slider TextSizeSlider;
 
 	private List<AudioSource> sources = new List<AudioSource>();
 	private CurrentSettings settings;
 	private readonly string fileName = "usersettings.json";
-	private UnityEngine.Rendering.Universal.Vignette vignette;
-	private List<TextElement> textSources = new List<TextElement>();
+	private List<Text> textSources = new List<Text>();
 	
 	void Start()
     {
-		Text[] text = GameObject.FindObjectsOfType<TextElement>();
-		for (int i = 0; i < text.Length; i++)
+
+        Text[] text = GameObject.FindObjectsOfType<Text>();
+        for (int i = 0; i < text.Length; i++)
         {
-			textSources.Add(text[i]);
+            textSources.Add(text[i]);
         }
 
-		VolumeSlider.onValueChanged.addListener(delegate { ChangeVolume(VolumeSlider.value); });
-		BrightnessSlider.onValueChanged.addListener(delegate { ChangeBrightness(BrightnessSlider.value); });
-		TextSizeSlider.onValueChanged.addListener(delegate { ChangeTextSize(TextSizeSlider.value); });
+        VolumeSlider.onValueChanged.AddListener(delegate { ChangeVolume(VolumeSlider.value); });
+        BrightnessSlider.onValueChanged.AddListener(delegate { ChangeBrightness(BrightnessSlider.value); });
+        TextSizeSlider.onValueChanged.AddListener(delegate { ChangeTextSize(TextSizeSlider.value); });
 
-		if (!File.Exists(this.fileName))
+        if (!File.Exists(this.fileName))
         {
 			settings = new CurrentSettings()
 			{
 				Volume = this.Volume,
 				Brightness = this.Brightness
 			};
-			string stringifiedSettings = JsonSerializer.Serialize(this.settings, typeof(CurrentSettings));
+			string stringifiedSettings = JsonUtility.ToJson(this.settings);
 			using (StreamWriter sw = File.CreateText(this.fileName))
             {
 				sw.WriteLine(stringifiedSettings);
@@ -51,7 +52,7 @@ public class Settings : MonoBehaviour
         {
 			using (StreamReader sr = File.OpenText(this.fileName))
             {
-				this.settings = JsonSerializer.Deserialize(sr.ReadToEnd(), typeof(CurrentSettings));
+				this.settings = JsonUtility.FromJson<CurrentSettings>(sr.ReadToEnd());
             }
         }
 
@@ -63,10 +64,18 @@ public class Settings : MonoBehaviour
 
 		ChangeVolume(this.settings.Volume);
 
-		UnityEngine.Rendering.VolumeProfile volumeProfile = GetComponent<UnityEngine.Rendering.Volume>()?.profile;
-		if (!volumeProfile) throw new System.NullReferenceException(nameof(UnityEngine.Rendering.VolumeProfile));
+		LightingSettings lightingSettings = new LightingSettings();
 
-		if (!volumeProfile.TryGet(out vignette)) throw new System.NullReferenceException(nameof(vignette));
+		// Configure the LightingSettings object
+		lightingSettings.albedoBoost = Brightness;
+
+		// Assign the LightingSettings object to the active Scene
+		Lightmapping.lightingSettings = lightingSettings;
+
+		//UnityEngine.Rendering.VolumeProfile volumeProfile = GetComponent<UnityEngine.Rendering.Volume>()?.profile;
+		//if (!volumeProfile) throw new System.NullReferenceException(nameof(UnityEngine.Rendering.VolumeProfile));
+
+		//if (!volumeProfile.TryGet(out vignette)) throw new System.NullReferenceException(nameof(vignette));
 
 		ChangeBrightness(this.settings.Brightness);
 		ChangeTextSize(this.settings.TextSize);
@@ -86,15 +95,21 @@ public class Settings : MonoBehaviour
     {
 		this.Brightness = sliderValue;
 
-		vignette.intensity.Override(this.Brightness);
+		LightingSettings lightingSettings = new LightingSettings();
+
+		// Configure the LightingSettings object
+		lightingSettings.albedoBoost = this.Brightness;
+
+		// Assign the LightingSettings object to the active Scene
+		Lightmapping.lightingSettings = lightingSettings;
 	}
 
-	public void ChangeTextSize(int sliderValue)
+	public void ChangeTextSize(float sliderValue)
 	{
-		this.TextSize = sliderValue;
+		this.TextSize = (int)sliderValue;
 		this.textSources.ForEach(text =>
 		{
-			text.style.fontSize = this.TextSize;
+			text.fontSize = this.TextSize;
 		});
 	}
 
@@ -104,31 +119,20 @@ public class Settings : MonoBehaviour
 		this.settings.Volume = this.Volume;
 		this.settings.TextSize = this.TextSize;
 
-		string stringifiedSettings = JsonSerializer.Serialize(this.settings, typeof(CurrentSettings));
+		string stringifiedSettings = JsonUtility.ToJson(this.settings);
 		using (StreamWriter sw = File.CreateText(this.fileName))
 		{
 			sw.WriteLine(stringifiedSettings);
 		}
 	}
-
-	public void ChangeTextSize(int sliderValue)
-    {
-		this.TextSize = sliderValue;
-		this.textSources.ForEach(text =>
-		{
-			text.style.fontSize = this.TextSize;
-		});
-    }
-
+	
+	[Serializable]
 	private class CurrentSettings
-    {
-		[JsonProperty("volume")]
+    {		
 		public float Volume { get; set; }
-
-		[JsonProperty("brightness")]
+		
 		public float Brightness { get; set; }
 
-		[JsonProperty("textsize")]
 		public int TextSize { get; set; }
     }
 }
