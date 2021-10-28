@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
+using System;
 
 [RequireComponent(typeof(ActionBasedController))]
 public class LeftHandController : MonoBehaviour
@@ -17,7 +18,7 @@ public class LeftHandController : MonoBehaviour
     [SerializeField]
     public MenuManager menuManager;
     public bool isHolding;
-
+    [SerializeField]
     private XRDirectInteractor interactor;
     private bool isPressing;
 
@@ -32,22 +33,33 @@ public class LeftHandController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool menuInputValue = openMenu.action.ReadValue<bool>();
-        if (menuManager.IsMenuOpen && menuInputValue)
+        float menuInputValue = openMenu.action.ReadValue<float>();
+        if (menuManager.IsMenuOpen && menuInputValue > 0.5F)
         {
             menuManager.CloseMenu();
         }
-        else if (!menuManager.IsMenuOpen && menuInputValue)
+        else if (!menuManager.IsMenuOpen && menuInputValue >0.5F)
         {
             menuManager.OpenMenu();
         }
         float selectInputValue = controller.selectAction.action.ReadValue<float>();
         this.thisHand.SetGrip(selectInputValue);
-        if (selectInputValue > 0.4 && interactor.selectTarget != null)
+        try
         {
-            isHolding = true;
+            if (selectInputValue > 0.4 && interactor.selectTarget != null)
+            {
+                isHolding = true;
+            }
+            else
+            {
+                isHolding = false;
+                if (thisHand.transform.parent != gameObject.transform)
+                {
+                    thisHand.transform.SetParent(gameObject.transform, false);
+                }
+            }
         }
-        else
+        catch (NullReferenceException)
         {
             isHolding = false;
             if (thisHand.transform.parent != gameObject.transform)
@@ -55,7 +67,6 @@ public class LeftHandController : MonoBehaviour
                 thisHand.transform.SetParent(gameObject.transform, false);
             }
         }
-
         float activateInputValue = controller.activateAction.action.ReadValue<float>();
         this.thisHand.SetTrigger(activateInputValue);
 

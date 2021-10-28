@@ -497,7 +497,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e3a7761d-3bc7-490e-a261-2f668c0ec2f8"",
-                    ""path"": ""<XRController>{RightHand}/primaryButton"",
+                    ""path"": ""<XRController>{LeftHand}/primaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller;Continuous Move"",
