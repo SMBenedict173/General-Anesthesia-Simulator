@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.InputSystem.Controls;
 using System;
 
 public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIRightHandActions
@@ -17,7 +12,7 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
     [SerializeField]
     private InputActionReference simulationPressAction;
     public bool isHolding;
-
+    [SerializeField]
     private XRDirectInteractor interactor;
     private bool isPressing;
 
@@ -32,11 +27,22 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
     {
         float selectInputValue = controller.selectAction.action.ReadValue<float>();
         this.thisHand.SetGrip(selectInputValue);
-        if (selectInputValue > 0.4 && interactor.selectTarget != null)
+        try
         {
-            isHolding = true;
+            if (selectInputValue > 0.4 && interactor.selectTarget != null)
+            {
+                isHolding = true;
+            }
+            else
+            {
+                isHolding = false;
+                if (thisHand.transform.parent != gameObject.transform)
+                {
+                    thisHand.transform.SetParent(gameObject.transform, false);
+                }
+            }
         }
-        else
+        catch (NullReferenceException)
         {
             isHolding = false;
             if (thisHand.transform.parent != gameObject.transform)
@@ -44,7 +50,6 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
                 thisHand.transform.SetParent(gameObject.transform, false);
             }
         }
-
         float activateInputValue = controller.activateAction.action.ReadValue<float>();
         this.thisHand.SetTrigger(activateInputValue);
 

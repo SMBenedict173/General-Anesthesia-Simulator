@@ -175,6 +175,14 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Open Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""29d3f55e-c2bf-44d6-833b-5f1ca0683286"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -489,7 +497,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e3a7761d-3bc7-490e-a261-2f668c0ec2f8"",
-                    ""path"": ""<XRController>{RightHand}/primaryButton"",
+                    ""path"": ""<XRController>{LeftHand}/primaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller;Continuous Move"",
@@ -516,6 +524,17 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Noncontinuous Move"",
                     ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2283a768-f899-43c5-8f7d-4bd8d07402af"",
+                    ""path"": ""<XRController>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Generic XR Controller"",
+                    ""action"": ""Open Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1053,6 +1072,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         m_XRILeftHand_RotateAnchor = m_XRILeftHand.FindAction("Rotate Anchor", throwIfNotFound: true);
         m_XRILeftHand_TranslateAnchor = m_XRILeftHand.FindAction("Translate Anchor", throwIfNotFound: true);
         m_XRILeftHand_SimulationPress = m_XRILeftHand.FindAction("SimulationPress", throwIfNotFound: true);
+        m_XRILeftHand_OpenMenu = m_XRILeftHand.FindAction("Open Menu", throwIfNotFound: true);
         // XRI RightHand
         m_XRIRightHand = asset.FindActionMap("XRI RightHand", throwIfNotFound: true);
         m_XRIRightHand_Position = m_XRIRightHand.FindAction("Position", throwIfNotFound: true);
@@ -1173,6 +1193,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_XRILeftHand_RotateAnchor;
     private readonly InputAction m_XRILeftHand_TranslateAnchor;
     private readonly InputAction m_XRILeftHand_SimulationPress;
+    private readonly InputAction m_XRILeftHand_OpenMenu;
     public struct XRILeftHandActions
     {
         private @XRIDefaultInputActions m_Wrapper;
@@ -1191,6 +1212,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         public InputAction @RotateAnchor => m_Wrapper.m_XRILeftHand_RotateAnchor;
         public InputAction @TranslateAnchor => m_Wrapper.m_XRILeftHand_TranslateAnchor;
         public InputAction @SimulationPress => m_Wrapper.m_XRILeftHand_SimulationPress;
+        public InputAction @OpenMenu => m_Wrapper.m_XRILeftHand_OpenMenu;
         public InputActionMap Get() { return m_Wrapper.m_XRILeftHand; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1242,6 +1264,9 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 @SimulationPress.started -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnSimulationPress;
                 @SimulationPress.performed -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnSimulationPress;
                 @SimulationPress.canceled -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnSimulationPress;
+                @OpenMenu.started -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnOpenMenu;
+                @OpenMenu.performed -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnOpenMenu;
+                @OpenMenu.canceled -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnOpenMenu;
             }
             m_Wrapper.m_XRILeftHandActionsCallbackInterface = instance;
             if (instance != null)
@@ -1288,6 +1313,9 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 @SimulationPress.started += instance.OnSimulationPress;
                 @SimulationPress.performed += instance.OnSimulationPress;
                 @SimulationPress.canceled += instance.OnSimulationPress;
+                @OpenMenu.started += instance.OnOpenMenu;
+                @OpenMenu.performed += instance.OnOpenMenu;
+                @OpenMenu.canceled += instance.OnOpenMenu;
             }
         }
     }
@@ -1477,6 +1505,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         void OnRotateAnchor(InputAction.CallbackContext context);
         void OnTranslateAnchor(InputAction.CallbackContext context);
         void OnSimulationPress(InputAction.CallbackContext context);
+        void OnOpenMenu(InputAction.CallbackContext context);
     }
     public interface IXRIRightHandActions
     {
