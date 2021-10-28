@@ -884,6 +884,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1001 &2017038562
 --- !u!114 &1585870235 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 434349280441490792, guid: 6d64c522c7df56743a650691f74757c7, type: 3}
