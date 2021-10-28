@@ -19,7 +19,7 @@ public class ReturnToSpawnPoint : MonoBehaviour
         //This may not be necessary. If not delete to reduce the number of calculations per frame
         if (!this.isHeld)
         {
-            this.gameObject.transform.SetParent(spawnPoint, false);
+            this.gameObject.transform.position = spawnPoint.position;
             this.gameObject.transform.rotation = spawnPoint.rotation;
         }
     }
@@ -32,7 +32,7 @@ public class ReturnToSpawnPoint : MonoBehaviour
     public void ReturnToSpawn()
     {
         this.isHeld = false;
-        this.gameObject.transform.SetParent(spawnPoint, false);
+        this.gameObject.transform.position = spawnPoint.position;
         this.gameObject.transform.rotation = spawnPoint.rotation;
     }
 }

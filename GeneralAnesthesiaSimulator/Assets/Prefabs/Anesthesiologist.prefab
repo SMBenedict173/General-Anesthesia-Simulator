@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisHand: {fileID: 7826328758260533277}
   controller: {fileID: 2147137381948369489}
-  simulationPressAction: {fileID: 0}
+  simulationPressAction: {fileID: -7962680159361011749, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   isHolding: 0
 --- !u!114 &2603816088640161877
 MonoBehaviour:
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisHand: {fileID: 1360712300189372206}
   controller: {fileID: 7185794561131391813}
-  simulationPressAction: {fileID: 0}
+  simulationPressAction: {fileID: -2492975589993323595, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   isHolding: 0
 --- !u!1 &1188069641857841322
 GameObject:
@@ -1081,13 +1081,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7401099822900311128}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.3, z: 0.15}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.128, y: -0.475, z: -0.471}
+  m_LocalScale: {x: 0.01, y: 0.2, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1325151874683322356}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &299894499760069532
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1332,7 +1332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8930297915640910477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.753, y: 1.435, z: 0.524767}
+  m_LocalPosition: {x: 0.27, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2701797763523101108}
