@@ -6,7 +6,7 @@ using UnityEngine;
 public class SafetyGuideText : MonoBehaviour
 {
     public List<Section> safetySections { get; }
-    public int currentSectionIndex { get; }
+    public int currentSectionIndex { get; set; }
 
     public SafetyGuideText()
     {
@@ -118,26 +118,29 @@ public class SafetyGuideText : MonoBehaviour
         }));
     }
 
-    public string toString()
+    override public string ToString()
     {
         string s = "";
 
         foreach (var section in safetySections)
         {
-            s.append("\n" + section.toString());
+            s += "\n" + section.ToString();
         }
 
         return s;
     }
 
-    public void completeNextItem()
+    public void CompleteNextItem()
     {
+        safetySections[currentSectionIndex].CompleteNextItem();
 
+        if (safetySections[currentSectionIndex].completed)
+            currentSectionIndex++;
     }
 
-    public List<string> getCurrentItem()
+    public string GetSectionString()
     {
-        return new List<string>() { safetySections[currentSectionIndex].title, safetySections[currentSectionIndex].getCurrentStep() };
+        return safetySections[currentSectionIndex].ToString();
     }
 }
 
@@ -145,14 +148,17 @@ public class Section
 {
     public string title { get; set; }
     public List<Step> steps;
+    public int currentStepIndex { get; set; }
+    public bool completed { get; set; }
 
     public Section(string title, List<Step> steps)
     {
         this.title = title;
         this.steps = steps;
+        this.completed = false;
     }
 
-    public string getCurrentStep()
+    public string GetCurrentStep()
     {
         foreach (var step in steps)
         {
@@ -163,16 +169,28 @@ public class Section
         return "Completed Section";
     }
 
-    public string toString()
+    override public string ToString()
     {
         string s = "<b>" + title + "</b>";
 
         foreach (var step in steps)
         {
-            s.append("\n\t" + step.toString());
+            s += "\n-" + step.ToString();
         }
 
-        returh s;
+        return s;
+    }
+
+    public void CompleteNextItem()
+    {
+        steps[currentStepIndex].CompleteNextItem();
+
+        if (steps[currentStepIndex].substeps.All(substep => substep.completed))
+            currentStepIndex += 1;
+
+        if (steps.All(step => step.completed))
+            this.completed = true;
+
     }
 }
 
@@ -196,20 +214,20 @@ public class Step
         this.completed = false;
     }
 
-    public string toString()
+    override public string ToString()
     {
         string s = description;
 
         foreach (var substep in substeps)
         {
-            s.append("\n\t\t" + substep.description);
+            s += "\n\t-" + substep.description;
         }
 
         return s;
 
     }
 
-    public string getCurrentStep()
+    public string GetCurrentStep()
     {
         if (substeps.Count == 0)
             return description;
@@ -221,6 +239,29 @@ public class Step
         }
 
         return "Step Completed";
+    }
+
+    public void CompleteNextItem()
+    {
+        if (substeps.Count == 0)
+        {
+            completed = true;
+            return;
+        }
+
+        for(int i = 0; i < substeps.Count; i++)
+        {
+            if (!substeps[i].completed)
+            {
+                substeps[i].completed = true;
+                break;
+            }
+        }
+
+        if(substeps.All(step => step.completed))
+        {
+            completed = true;
+        }
     }
 
 
