@@ -17,18 +17,18 @@ public class TestingSafetyScript : MonoBehaviour
     }
     public void UpdateGuideText()
     {
-        guideText.text = safetySteps.GetSectionString();
+        guideText.text = safetySteps.GetSectionStringFormatted();
     }
 
     public void GetSafetySteps()
     {
-        guideText.text = safetySteps.ToString();
+        guideText.text = safetySteps.ToStringFormatted();
     }
 
     public void CompleteStep()
     {
         safetySteps.CompleteNextItem();
-        guideText.text = safetySteps.GetSectionString();
+        guideText.text = safetySteps.GetSectionStringFormatted();
 
         debugText.text = "";
 
@@ -40,4 +40,8 @@ public class TestingSafetyScript : MonoBehaviour
 
     }
 
+    public void testColor()
+    {
+        debugText.text = "<color=green> This is a test </color>";
+    }
 }

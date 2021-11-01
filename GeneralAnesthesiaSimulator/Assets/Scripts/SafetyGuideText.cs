@@ -130,6 +130,21 @@ public class SafetyGuideText : MonoBehaviour
         return s;
     }
 
+    public string ToStringFormatted()
+    {
+        string s = "";
+
+        foreach (var section in safetySections)
+        {
+            if(!section.completed)
+                s += "\n" + section.ToStringFormatted();
+            else
+                s += "\n<color=green>" + section.ToStringFormatted() + "</color>";
+        }
+
+        return s;
+    }
+
     public void CompleteNextItem()
     {
         safetySections[currentSectionIndex].CompleteNextItem();
@@ -141,6 +156,11 @@ public class SafetyGuideText : MonoBehaviour
     public string GetSectionString()
     {
         return safetySections[currentSectionIndex].ToString();
+    }
+
+    public string GetSectionStringFormatted()
+    {
+        return safetySections[currentSectionIndex].ToStringFormatted();
     }
 }
 
@@ -175,7 +195,26 @@ public class Section
 
         foreach (var step in steps)
         {
-            s += "\n-" + step.ToString();
+            s += "\n\n" + (steps.IndexOf(step) + 1).ToString() + ". " + step.ToString();
+        }
+
+        return s;
+    }
+
+    public string ToStringFormatted()
+    {
+        string s = "";
+
+        if(!completed)
+            s += "<b>" + title + "</b>";
+
+        if (completed)
+            s += "<color=green><b>" + title + "</color></b>";
+
+        foreach (var step in steps)
+        {
+            s += "\n\n" + (steps.IndexOf(step) + 1).ToString() + ". " + step.ToStringFormatted();
+
         }
 
         return s;
@@ -220,11 +259,31 @@ public class Step
 
         foreach (var substep in substeps)
         {
-            s += "\n\t-" + substep.description;
+            s += "\n<margin=2em>" + (char)(substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
         }
 
         return s;
 
+    }
+
+    public string ToStringFormatted()
+    {
+        string s = "";
+
+        if (!completed)
+            s += description;
+        else
+            s += "<color=green> " + description + " </color>";
+
+        foreach (var substep in substeps)
+        {
+            if(!substep.completed)
+                s += "\n<margin=2em>" + (char)(substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
+            else
+                s += "\n<margin=2em><color=green> " + (char)(substeps.IndexOf(substep) + 97) + ". " + substep.description + " </color></margin>";
+        }
+
+        return s;
     }
 
     public string GetCurrentStep()
