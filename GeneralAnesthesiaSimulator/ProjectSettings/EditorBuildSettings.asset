@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OperatingRoom.unity
     guid: f57e5d194395a9c44a1dc202447e2311
-  - enabled: 1
-    path: Assets/Scenes/SummaryMenu.unity
-    guid: 3a938d8a87d678b479c4d43178d60f2d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8ac0f19e72e626046b52c5b219a33b56, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 22c7649226d15b74083e2b03819995e9, type: 2}
