@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
-[RequireComponent(typeof(RigidBody))]
-[RequireComponent(typeof(SphereCollider)]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(SphereCollider))]
 public class HoseConnection : MonoBehaviour
 {
 	//[SerializeField]

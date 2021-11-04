@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HoseEnd : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class HoseEnd : MonoBehaviour
 	{
 		if (connectionInRange != null && canConnect)
 		{
-			this.connectionJoint.ConnectedBody = connectionInRange.gameObject.GetComponent<RigidBody>();
+			this.connectionJoint.connectedBody = connectionInRange.gameObject.GetComponent<Rigidbody>();
 			connectedTo = connectionInRange;
 			canConnect = false;
 		}
@@ -38,7 +39,7 @@ public class HoseEnd : MonoBehaviour
 
 	public void Disconnect()
 	{
-		this.connectionJoint.ConnectedBody = null;
+		this.connectionJoint.connectedBody = null;
 		this.connectedTo = null;
 	}
 
@@ -55,7 +56,7 @@ public class HoseEnd : MonoBehaviour
 		}
 	}
 
-	private void onTriggerExit()
+	private void onTriggerExit(Collider other)
 	{
 		canConnect = false;
 		connectionInRange = null;

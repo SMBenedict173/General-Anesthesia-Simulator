@@ -24,6 +24,6 @@ public class Hose : MonoBehaviour
 	{
 		isConnectedToSource = (endOne.connectedTo == source ^ endTwo.connectedTo == source) ? true : false;
 		isConnectedToDestination = (endTwo.connectedTo == destination ^ endOne.connectedTo == destination) ? true : false;
-		CanHosePassO2 = (isConnectedToSource && isConnectedToDestination && endOne.ConnectedTo != endTwo.ConnectedTo) ? true : false;
+		CanHosePassO2 = (isConnectedToSource && isConnectedToDestination && endOne.connectedTo != endTwo.connectedTo) ? true : false;
 	}
 }
