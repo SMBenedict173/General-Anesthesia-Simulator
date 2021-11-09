@@ -167,7 +167,9 @@ public class SafetyGuideText : MonoBehaviour
 public class Section
 {
     public string title { get; set; }
+
     public List<Step> steps;
+
     public int currentStepIndex { get; set; }
     public bool completed { get; set; }
 
@@ -176,6 +178,7 @@ public class Section
         this.title = title;
         this.steps = steps;
         this.completed = false;
+        this.currentStepIndex = 0;
     }
 
     public string GetCurrentStep()
@@ -240,17 +243,21 @@ public class Step
 
     public List<Step> substeps;
 
+    public int currentSubStepIndex { get; set; }
+
     public Step(string description)
     {
         this.description = description;
         this.substeps = new List<Step>();
         this.completed = false;
+        this.currentSubStepIndex = 0;
     }
     public Step(string description, List<Step> substeps)
     {
         this.description = description;
         this.substeps = substeps;
         this.completed = false;
+        this.currentSubStepIndex = 0;
     }
 
     override public string ToString()
@@ -313,6 +320,7 @@ public class Step
             if (!substeps[i].completed)
             {
                 substeps[i].completed = true;
+                currentSubStepIndex += 1;
                 break;
             }
         }
