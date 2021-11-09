@@ -18,7 +18,7 @@ AvatarMask:
   - m_Path: hands:r_hand_world
     m_Weight: 1
   - m_Path: hands:r_hand_world/hands:b_r_hand
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: hands:r_hand_world/hands:b_r_hand/hands:b_r_grip
     m_Weight: 1
   - m_Path: hands:r_hand_world/hands:b_r_hand/hands:b_r_hand_ignore

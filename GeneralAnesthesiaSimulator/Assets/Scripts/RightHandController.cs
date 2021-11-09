@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.InputSystem.Controls;
 using System;
 
 public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIRightHandActions
@@ -17,7 +12,7 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
     [SerializeField]
     private InputActionReference simulationPressAction;
     public bool isHolding;
-
+    [SerializeField]
     private XRDirectInteractor interactor;
     private bool isPressing;
 
