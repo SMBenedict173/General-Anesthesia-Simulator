@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class Squeezing : MonoBehaviour
 {
+    public bool isActivated;
 
-    public bool beingSqueezed { get; set; }
-    public bool hasAirSupply { get; set; }
+    public bool autoInflateActivated;
 
+    public Vector3 changeAmount;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        beingSqueezed = false;
-        hasAirSupply = false;
-
+        isActivated = false;
+        autoInflateActivated = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (beingSqueezed)
-        {
-            //compress 
-        }
-        else if (hasAirSupply)
-        {
-            // expand
-        }
+        if (isActivated)
+            transform.localScale -= changeAmount;
+        else if (autoInflateActivated)
+            transform.localScale += changeAmount;
     }
 }
