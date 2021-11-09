@@ -43,6 +43,8 @@ public class HoseEnd : MonoBehaviour
 			this.connectionJoint.connectedBody = connectionInRange.gameObject.GetComponent<Rigidbody>();
 			connectedTo = connectionInRange;
 			canConnect = false;
+			this.transform.rotation = connectionInRange.transform.rotation;
+			this.transform.position = connectionInRange.transform.position;
 		}
 	}
 
