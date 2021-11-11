@@ -4052,7 +4052,7 @@ GameObject:
   - component: {fileID: 7211648060042667281}
   - component: {fileID: 6845888095233157839}
   m_Layer: 0
-  m_Name: on_button_green
+  m_Name: o2_flush_green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4538,7 +4538,7 @@ GameObject:
   - component: {fileID: 3827901582789855816}
   - component: {fileID: 376598950407313731}
   m_Layer: 0
-  m_Name: off_indicator_light_label
+  m_Name: off_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5184,7 +5184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599192714521984072}
   m_Layer: 0
-  m_Name: on_button
+  m_Name: o2_flush_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7679,7 +7679,7 @@ GameObject:
   - component: {fileID: 1567616441973597423}
   - component: {fileID: 8064212797101412644}
   m_Layer: 0
-  m_Name: on_indicator_light_label
+  m_Name: on_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8116,7 +8116,7 @@ GameObject:
   - component: {fileID: 4583905195285012909}
   - component: {fileID: 6955480823490211671}
   m_Layer: 0
-  m_Name: on_button_outline
+  m_Name: o2_flush_outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17673,7 +17673,7 @@ GameObject:
   - component: {fileID: 8278380814212423434}
   - component: {fileID: 4664891073257260349}
   m_Layer: 0
-  m_Name: on_button_holder
+  m_Name: o2_flush_button_holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
