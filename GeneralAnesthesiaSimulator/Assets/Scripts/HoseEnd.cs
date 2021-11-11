@@ -40,12 +40,13 @@ public class HoseEnd : MonoBehaviour
 		bool connectability = connectionInRange != null && canConnect;
 		if (connectability)
 		{
+			Debug.Log("Connection is possible");
 			this.connectionJoint.connectedBody = connectionInRange.gameObject.GetComponent<Rigidbody>();
 			connectedTo = connectionInRange;
 			canConnect = false;
-			this.transform.rotation = connectionInRange.transform.rotation;
-			this.transform.position = connectionInRange.transform.position;
-		}
+            //this.transform.rotation = connectionInRange.transform.rotation;
+            //this.transform.position = connectionInRange.transform.position;
+        }
 	}
 
 	public void Disconnect()
@@ -54,7 +55,7 @@ public class HoseEnd : MonoBehaviour
 		this.connectedTo = null;
 	}
 
-	private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
 	{
 		
 		if (other.gameObject.GetComponent<HoseConnection>() != null)
