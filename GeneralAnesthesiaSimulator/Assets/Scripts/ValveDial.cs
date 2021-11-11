@@ -1,11 +1,12 @@
 ﻿using System;
 using UnityEngine;
 
-public class ValveDial : Grippable, IToggleable
+public class ValveDial : Toggleable
 {
     public float OffRotation;
     public float OnRotation;
     private float targetRotation;
+    public Transform ThisTransform;
 
     public float AnimationDelta;
 	void Update()
@@ -15,31 +16,17 @@ public class ValveDial : Grippable, IToggleable
     }
      
 
-    private void Deactivate()
+    protected override void Deactivate()
     {
         IsActivated = false;
         targetRotation = OffRotation;
     }
 
-    private void Activate()
+    protected override void Activate()
     {
         IsActivated = true;
         targetRotation = OnRotation;
     }
     
-    public void ToggleActivation()
-    {
-        bool previousActivationStatus = IsActivated;
-        if (!previousActivationStatus)
-        {
-            Activate();
-            
-        }
-        
-        if (previousActivationStatus)
-        {
-            Deactivate();
-            
-        }
-    }
+    
 }
