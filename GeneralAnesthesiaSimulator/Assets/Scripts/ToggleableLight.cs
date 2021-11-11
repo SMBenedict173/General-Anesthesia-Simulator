@@ -1,21 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-public class ToggleableLight : MonoBehaviour, IToggleable
+public class ToggleableLight : Toggleable
 {
 	public bool StartingStatus;
-
-    private bool IsActive;
 
     public Light ThisLight;
 
     public float IntensityWhenActive;
 
-    public Grippable triggerObject;
-
 	void Start()
     {
-        IsActive = StartingStatus;
+        IsActivated = StartingStatus;
     }
 
     void Update()
@@ -23,36 +19,15 @@ public class ToggleableLight : MonoBehaviour, IToggleable
 
     }
 
-    //public bool GetActivationStatus()
-    //{
-    //    return triggerObject.IsActivated;
-    //}
-
-    private void Activate()
+    protected override void Activate()
     {
         ThisLight.intensity = IntensityWhenActive;
-        IsActive = true;
+        IsActivated = true;
     }
 
-    private void DeActivate()
+    protected override void Deactivate()
     {
         ThisLight.intensity = 0F;
-        IsActive = false;
-    }
-
-    public void ToggleActivation()
-    {
-        bool previousActivationStatus = IsActive;
-        //bool GotInput = GetActivationStatus();
-
-        if (!previousActivationStatus)
-        {
-            Activate();
-        }
-
-        if (previousActivationStatus)
-        {
-            DeActivate();
-        }
+        IsActivated = false;
     }
 }

@@ -16,7 +16,9 @@ public class Hand : MonoBehaviour
     private float currentTriggerPoint;
     private float pressTarget;
     private float currentPressPoint;
-
+    [Tooltip("Collider used to determine when a collision occurs with a button while the player holds the press input.")]
+    [SerializeField]
+    private SphereCollider fingerTip;
     private string gripAnimationParameter = "Hold";
     private string triggerAnimationParameter = "UseHeld";
     private string pressAnimationParameter = "Press";
@@ -25,7 +27,7 @@ public class Hand : MonoBehaviour
     void Start()
     {
         animator = this.GetComponent<Animator>();// Only necessary if not assigned in inspector
-        
+        fingerTip.enabled = false;
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class Hand : MonoBehaviour
     public void SetPress(float pressInput)
     {
         pressTarget = pressInput;
+        fingerTip.enabled = pressInput > 0.4;
     }
 
     public void AnimateHand()
