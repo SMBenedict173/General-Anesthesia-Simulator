@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 3249781483598923571}
   - component: {fileID: 8933355907974405449}
   - component: {fileID: 499744460608395291}
+  - component: {fileID: 4124698306092172624}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -282,6 +283,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8933355907974405449}
   AnimationDelta: 10
+  fingerTip: {fileID: 4124698306092172624}
+--- !u!135 &4124698306092172624
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2761370290410626441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.02
+  m_Center: {x: -0.01, y: 0.02, z: 0.1}
 --- !u!1 &3513030819103123762
 GameObject:
   m_ObjectHideFlags: 0
