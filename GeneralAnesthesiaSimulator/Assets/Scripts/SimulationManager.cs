@@ -28,20 +28,20 @@ public class SimulationManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        bool check = isCurrentInteractionComplete();
-        
-        if (check)
+    {   
+        // check if the interaction was completed 
+        if (IsCurrentInteractionComplete())
         {
+            DisableGuidingLightForCurrent();
             currentInteraction += 1;
 
-            updateIndexes();
-            updateGuidingLight();
+            UpdateIndexes();
+            EnableGuidingLightForCurrent();
         }
 
     }
 
-    private void updateIndexes()
+    private void UpdateIndexes()
     {
         if (guideInteractions.Sections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted())
         {
@@ -62,17 +62,28 @@ public class SimulationManager : MonoBehaviour
         }
     }
 
-    private bool isCurrentInteractionComplete()
+    private bool IsCurrentInteractionComplete()
     {
-        return true;
+        return guideInteractions.Sections[currentSection]
+            .Steps[currentStep]
+            .Substeps[currentSubstep]
+            .CheckCompletion(currentInteraction);
 
     }
 
-    private void updateGuidingLight()
+    private void EnableGuidingLightForCurrent()
     {
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
             .GetComponent<GuidingLight>().EnableHighlight();
+    }
+
+    private void DisableGuidingLightForCurrent()
+    {
+        guideInteractions.Sections[currentSection]
+            .Steps[currentStep].Substeps[currentSubstep]
+            .InteractionObjects[currentInteraction]
+            .GetComponent<GuidingLight>().DisableHighlight();
     }
 }

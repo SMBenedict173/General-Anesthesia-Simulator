@@ -60,4 +60,9 @@ public class SerializableSubstep
         isCompleted = InteractionObjects.All(a => a.GetComponent<Interactable>().getCompletedInteraction() == true);
         return isCompleted;
     }
+
+    public bool CheckCompletion(int index)
+    {
+        return InteractionObjects[index].GetComponent<Interactable>().getCompletedInteraction();
+    }
 }
