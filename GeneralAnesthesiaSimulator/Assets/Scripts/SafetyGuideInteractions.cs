@@ -1,30 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SafetyGuideInteractions : MonoBehaviour
 {
     [SerializeField]
-    public List<serializableSection> SafetySections = new List<serializableSection>();
+    public List<SerializableSection> SafetySections = new List<SerializableSection>();
+    public List<bool> SectionCompletion; 
+
+    public SafetyGuideInteractions()
+    {
+        SectionCompletion = Enumerable.Repeat(false, SafetySections.Count).ToList();
+    }
+
 }
 
 [System.Serializable]
-public class serializableSection
+public class SerializableSection
 {
     [SerializeField]
-    public List<serializableStep> steps = new List<serializableStep>();
+    public List<SerializableStep> Steps = new List<SerializableStep>();
+    public List<bool> StepsCompletion; 
+
+    public SerializableSection()
+    {
+        StepsCompletion = Enumerable.Repeat(false, Steps.Count).ToList();
+    }
 }
 
 [System.Serializable]
-public class serializableStep
+public class SerializableStep
 {
     [SerializeField]
-    public List<serializableSubstep> substeps;
+    public List<SerializableSubstep> Substeps;
+    public List<bool> SubstepCompletion; 
+
+    public SerializableStep()
+    {
+        SubstepCompletion = Enumerable.Repeat(false, Substeps.Count).ToList();
+    }
 }
 
 [System.Serializable]
-public class serializableSubstep
+public class SerializableSubstep
 {
     [SerializeField]
-    public List<GameObject> interactions;
+    public List<GameObject> InteractionObjects;
+    public List<bool> InteractionCompletion;
+
+    public SerializableSubstep()
+    {
+        InteractionCompletion = Enumerable.Repeat(false, InteractionObjects.Count).ToList();
+    }
+
+
+
+    public void CompleteInteraction(GameObject interactableObject)
+    {
+        int index = InteractionObjects.IndexOf(interactableObject);
+        InteractionCompletion[index] = true;
+    }
 }

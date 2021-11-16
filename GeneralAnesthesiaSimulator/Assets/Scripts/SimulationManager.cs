@@ -15,7 +15,8 @@ public class SimulationManager : MonoBehaviour
     private int currentSection = 0;
     private int currentStep = 0;
     private int currentSubstep = 0;
-    private int currentSubSubstep = 0; 
+    private int currentSubSubstep = 0;
+    private int currentInteraction = 0;
 
 
 
@@ -30,14 +31,33 @@ public class SimulationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool check = isCurrentInteractionComplete();
         
-        /*
-         * Check for new interactions 
-         * If new interactions: Check step completion
-         * If step completed, check section 
-         * Finally, update guiding highlight
-         * 
-         */
+        if (check)
+        {
+            currentInteraction += 1;
 
+            updateGuidingLight();
+
+            
+
+        }
+
+    }
+
+    public bool isCurrentInteractionComplete()
+    {
+        return guideInteractions.SafetySections[currentSection]
+            .Steps[currentStep].Substeps[currentSubstep]
+            .InteractionCompletion[currentInteraction];
+
+    }
+
+    public void updateGuidingLight()
+    {
+        guideInteractions.SafetySections[currentSection]
+            .Steps[currentStep].Substeps[currentSubstep]
+            .InteractionObjects[currentInteraction]
+            .GetComponent<GuidingLight>().EnableHighlight();
     }
 }
