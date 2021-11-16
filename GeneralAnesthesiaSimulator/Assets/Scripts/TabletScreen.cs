@@ -14,7 +14,7 @@ public class TabletScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tabletText.text = guideText.ToStringFormatted();
+        tabletText.text = guideText.GetSectionStringFormatted();
         guideTextCurrentIndex = 0;
     }
 
@@ -24,7 +24,7 @@ public class TabletScreen : MonoBehaviour
         if (guideTextCurrentIndex != guideText.currentSectionIndex)
         {
             guideTextCurrentIndex = guideText.currentSectionIndex;
-            tabletText.text = guideText.ToStringFormatted();
+            tabletText.text = guideText.GetSectionStringFormatted();
         }
     }
 }
