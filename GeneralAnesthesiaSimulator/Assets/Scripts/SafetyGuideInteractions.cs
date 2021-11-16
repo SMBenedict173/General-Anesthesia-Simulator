@@ -7,6 +7,7 @@ public class SafetyGuideInteractions : MonoBehaviour
 {
     [SerializeField]
     public List<SerializableSection> SafetySections = new List<SerializableSection>();
+
     public List<bool> SectionCompletion; 
 
     public SafetyGuideInteractions()
@@ -21,6 +22,7 @@ public class SerializableSection
 {
     [SerializeField]
     public List<SerializableStep> Steps = new List<SerializableStep>();
+
     public List<bool> StepCompletion; 
 
     public SerializableSection()
@@ -45,6 +47,7 @@ public class SerializableStep
 {
     [SerializeField]
     public List<SerializableSubstep> Substeps;
+
     public List<bool> SubstepCompletion; 
 
     public SerializableStep()
@@ -68,6 +71,7 @@ public class SerializableSubstep
 {
     [SerializeField]
     public List<GameObject> InteractionObjects;
+
     public List<bool> InteractionCompletion;
 
     public SerializableSubstep()
