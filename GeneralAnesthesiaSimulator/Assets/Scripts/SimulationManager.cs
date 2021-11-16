@@ -35,13 +35,13 @@ public class SimulationManager : MonoBehaviour
             DisableGuidingLightForCurrent();
             currentInteraction += 1;
 
-            UpdateIndexes();
+            UpdateIndexesAndText();
             EnableGuidingLightForCurrent();
         }
 
     }
 
-    private void UpdateIndexes()
+    private void UpdateIndexesAndText()
     {
         if (guideInteractions.Sections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted())
         {
