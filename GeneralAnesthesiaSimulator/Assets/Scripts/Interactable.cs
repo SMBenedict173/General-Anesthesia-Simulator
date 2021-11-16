@@ -8,7 +8,6 @@ public class Interactable : MonoBehaviour
     private bool completedInteraction;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         completedInteraction = false;

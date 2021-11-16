@@ -8,8 +8,6 @@ public class SafetyGuideInteractions : MonoBehaviour
     [SerializeField]
     public List<SerializableSection> Sections = new List<SerializableSection>();
 
-    public bool isCompleted;
-
     public bool IsCompleted()
     {
         return Sections.All(a => a.isCompleted == true);
@@ -28,7 +26,9 @@ public class SerializableSection
 
     public bool IsCompleted()
     {
-        return Steps.All(a => a.isCompleted == true);
+        isCompleted = Steps.All(a => a.isCompleted == true);
+        return isCompleted;
+
     }
 }
 
@@ -42,7 +42,8 @@ public class SerializableStep
 
     public bool IsCompleted()
     {
-        return Substeps.All(a => a.isCompleted == true);
+        isCompleted = Substeps.All(a => a.isCompleted == true);
+        return isCompleted;
     }
 }
 
@@ -56,6 +57,7 @@ public class SerializableSubstep
 
     public bool IsCompleted()
     {
-        return InteractionObjects.All(a => a.GetComponent<Interactable>().getCompletedInteraction() == true);
+        isCompleted = InteractionObjects.All(a => a.GetComponent<Interactable>().getCompletedInteraction() == true);
+        return isCompleted;
     }
 }
