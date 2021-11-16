@@ -33,14 +33,7 @@ public class SafetyGuideText : MonoBehaviour
                 new Step("Attach \"Suction Bulb\" to common Fresh) gas outlet."),
                 new Step("Squeeze bulb repeatedly until fully collapsed."),
                 new Step("Verify bulb stays fully collapsed for at least 10 seconds."),
-                new Step("Open one vaporizer at a time and repeat 'c' and 'd' as above.", new List<Step>(){
-                        new Step("Open vaporizer 1"),
-                        new Step("Squeeze bulb repeatedly until fully collapsed."),
-                        new Step("Verify bulb stays fully collapsed for at least 10 seconds."),
-                        new Step("Open vaporizer 2"),
-                        new Step("Squeeze bulb repeatedly until fully collapsed."),
-                        new Step("Verify bulb stays fully collapsed for at least 10 seconds.")
-                }),
+                new Step("Open one vaporizer at a time and repeat 'c' and 'd' as above."),
                 new Step("Remove suction bulb, and reconnect fresh gas hose.")
             }),
             new Step("Turn On Machine Master Switch and all other necessary electrical equipment."),
