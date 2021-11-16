@@ -6,13 +6,13 @@ using UnityEngine;
 public class SafetyGuideInteractions : MonoBehaviour
 {
     [SerializeField]
-    public List<SerializableSection> SafetySections = new List<SerializableSection>();
+    public List<SerializableSection> Sections = new List<SerializableSection>();
 
-    public List<bool> SectionCompletion; 
+    public bool isCompleted;
 
-    public SafetyGuideInteractions()
+    public bool IsCompleted()
     {
-        SectionCompletion = Enumerable.Repeat(false, SafetySections.Count).ToList();
+        return Sections.All(a => a.isCompleted == true);
     }
 
 }
@@ -23,22 +23,12 @@ public class SerializableSection
     [SerializeField]
     public List<SerializableStep> Steps = new List<SerializableStep>();
 
-    public List<bool> StepCompletion; 
-
-    public SerializableSection()
-    {
-        StepCompletion = Enumerable.Repeat(false, Steps.Count).ToList();
-    }
+    public bool isCompleted;
 
 
     public bool IsCompleted()
     {
-        if( StepCompletion.All(a => a == true))
-        {
-            return true;
-        }
-
-        return false;
+        return Steps.All(a => a.isCompleted == true);
     }
 }
 
@@ -48,21 +38,11 @@ public class SerializableStep
     [SerializeField]
     public List<SerializableSubstep> Substeps;
 
-    public List<bool> SubstepCompletion; 
-
-    public SerializableStep()
-    {
-        SubstepCompletion = Enumerable.Repeat(false, Substeps.Count).ToList();
-    }
+    public bool isCompleted;
 
     public bool IsCompleted()
     {
-        if (SubstepCompletion.All(a => a == true))
-        {
-            return true;
-        }
-
-        return false;
+        return Substeps.All(a => a.isCompleted == true);
     }
 }
 
@@ -72,28 +52,10 @@ public class SerializableSubstep
     [SerializeField]
     public List<GameObject> InteractionObjects;
 
-    public List<bool> InteractionCompletion;
-
-    public SerializableSubstep()
-    {
-        InteractionCompletion = Enumerable.Repeat(false, InteractionObjects.Count).ToList();
-    }
-
-
-
-    public void CompleteInteraction(GameObject interactableObject)
-    {
-        int index = InteractionObjects.IndexOf(interactableObject);
-        InteractionCompletion[index] = true;
-    }
+    public bool isCompleted;
 
     public bool IsCompleted()
     {
-        if (InteractionCompletion.All(a => a == true))
-        {
-            return true;
-        }
-
-        return false;
+        return InteractionObjects.All(a => a.GetComponent<Interactable>().getCompletedInteraction() == true);
     }
 }

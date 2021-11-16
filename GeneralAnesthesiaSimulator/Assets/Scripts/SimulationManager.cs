@@ -16,10 +16,7 @@ public class SimulationManager : MonoBehaviour
     private int currentSection = 0;
     private int currentStep = 0;
     private int currentSubstep = 0;
-    private int currentSubSubstep = 0;
     private int currentInteraction = 0;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -46,17 +43,17 @@ public class SimulationManager : MonoBehaviour
 
     private void updateIndexes()
     {
-        if (guideInteractions.SafetySections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted())
+        if (guideInteractions.Sections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted())
         {
             currentSubstep += 1;
             currentInteraction = 0;
 
-            if (guideInteractions.SafetySections[currentSection].Steps[currentStep].IsCompleted())
+            if (guideInteractions.Sections[currentSection].Steps[currentStep].IsCompleted())
             {
                 currentStep += 1;
                 currentSubstep = 0;
 
-                if (guideInteractions.SafetySections[currentSection].IsCompleted())
+                if (guideInteractions.Sections[currentSection].IsCompleted())
                 {
                     currentSection += 1;
                     currentStep = 0;
@@ -67,15 +64,13 @@ public class SimulationManager : MonoBehaviour
 
     private bool isCurrentInteractionComplete()
     {
-        return guideInteractions.SafetySections[currentSection]
-            .Steps[currentStep].Substeps[currentSubstep]
-            .InteractionCompletion[currentInteraction];
+        return true;
 
     }
 
     private void updateGuidingLight()
     {
-        guideInteractions.SafetySections[currentSection]
+        guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
             .GetComponent<GuidingLight>().EnableHighlight();
