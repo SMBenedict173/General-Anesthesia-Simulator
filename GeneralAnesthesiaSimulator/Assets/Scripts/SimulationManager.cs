@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,15 +38,34 @@ public class SimulationManager : MonoBehaviour
         {
             currentInteraction += 1;
 
+            updateIndexes();
             updateGuidingLight();
-
-            
-
         }
 
     }
 
-    public bool isCurrentInteractionComplete()
+    private void updateIndexes()
+    {
+        if (guideInteractions.SafetySections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted())
+        {
+            currentSubstep += 1;
+            currentInteraction = 0;
+
+            if (guideInteractions.SafetySections[currentSection].Steps[currentStep].IsCompleted())
+            {
+                currentStep += 1;
+                currentSubstep = 0;
+
+                if (guideInteractions.SafetySections[currentSection].IsCompleted())
+                {
+                    currentSection += 1;
+                    currentStep = 0;
+                }
+            }
+        }
+    }
+
+    private bool isCurrentInteractionComplete()
     {
         return guideInteractions.SafetySections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
@@ -53,7 +73,7 @@ public class SimulationManager : MonoBehaviour
 
     }
 
-    public void updateGuidingLight()
+    private void updateGuidingLight()
     {
         guideInteractions.SafetySections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
