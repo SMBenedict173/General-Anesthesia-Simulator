@@ -1,28 +1,36 @@
-﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class ValveDial : Toggleable
+public class MultiSelectionDial : MonoBehaviour
 {
-    public float OffRotation;
-    public float OnRotation;
+    [SerializeField]
+    private List<float> selectionRotations;
     private float targetRotation;
-    public Transform ThisTransform;
+    private float currentRotation;
     public char AxisOfRotation;
-
     public float AnimationDelta;
+    private int selectionIndex; 
     private float x;
     private float y;
     private float z;
+    
+    // Start is called before the first frame update
     void Start()
     {
         if (char.IsWhiteSpace(AxisOfRotation))
         {
             throw new Exception("Axis of rotation must be specified.");
         }
+        selectionIndex = 0;
+        targetRotation = selectionRotations[selectionIndex];
         x = gameObject.transform.eulerAngles.x;
         y = gameObject.transform.eulerAngles.y;
         z = gameObject.transform.eulerAngles.z;
     }
+
+    // Update is called once per frame
     void Update()
     {
         Quaternion newRotation = Quaternion.Euler(x, y, z);
@@ -41,20 +49,13 @@ public class ValveDial : Toggleable
                 newRotation = Quaternion.Euler(x, y, targetRotation);
                 break;
         }
-        
+
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * AnimationDelta);
     }
-     
 
-    protected override void Deactivate()
+    public void ChangeSelection()
     {
-        IsActivated = false;
-        targetRotation = OffRotation;
-    }
-
-    protected override void Activate()
-    {
-        IsActivated = true;
-        targetRotation = OnRotation;
+        selectionIndex = (selectionIndex - 1) < selectionRotations.Count ? selectionIndex + 1 : 0;
+        targetRotation = selectionRotations[selectionIndex];
     }
 }

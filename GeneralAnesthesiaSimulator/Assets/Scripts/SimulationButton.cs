@@ -9,6 +9,11 @@ public class SimulationButton : Toggleable
 	public Toggleable whatThisToggles;
 	private Hand pressingHand;
 
+    [SerializeField]
+    private Material offMaterial;
+    [SerializeField]
+    private Material onMaterial;
+
 	void Start()
     {
 		IsActivated = false;
@@ -20,13 +25,20 @@ public class SimulationButton : Toggleable
     {
         Debug.Log("Morestuff");
 		IsActivated = IsActivated ? false : true;
-		whatThisToggles.ToggleActivation();
+        if (whatThisToggles != null)
+        {
+            whatThisToggles.ToggleActivation();
+        }
+        if (offMaterial != null && onMaterial != null)
+        {
+            this.ChangeTexture();
+        }
     }
 	
 	private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Stuff");
-		if (other.gameObject.GetComponent<Hand>() != null)
+		if (other.gameObject.GetComponent<Hand>() != null)// '!= null' is unnecessary, but it's clear what the intention is
         {
 			pressingHand = other.gameObject.GetComponent<Hand>();
 			this.ToggleActivation();
@@ -50,5 +62,10 @@ public class SimulationButton : Toggleable
     protected override void Deactivate()
     {
         throw new NotImplementedException();
+    }
+
+    public void ChangeTexture()
+    {
+        gameObject.GetComponent<MeshRenderer>().material = IsActivated ? onMaterial : offMaterial;
     }
 }

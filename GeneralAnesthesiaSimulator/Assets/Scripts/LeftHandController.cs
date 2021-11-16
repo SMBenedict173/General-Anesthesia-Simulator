@@ -85,6 +85,11 @@ public class LeftHandController : MonoBehaviour
             {
                 thisHand.transform.SetParent(heldDial.transform, false);
             }
+            MultiSelectionDial heldMultiDial = interactor.selectTarget.gameObject.GetComponent<MultiSelectionDial>();
+            if (heldMultiDial != null && thisHand.transform.parent != heldMultiDial.transform)
+            {
+                thisHand.transform.SetParent(heldMultiDial.transform, false);
+            }
         }
 
         this.thisHand.SetPress(simulationPressAction.action.ReadValue<float>());
