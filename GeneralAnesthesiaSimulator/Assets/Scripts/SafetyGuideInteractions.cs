@@ -21,11 +21,22 @@ public class SerializableSection
 {
     [SerializeField]
     public List<SerializableStep> Steps = new List<SerializableStep>();
-    public List<bool> StepsCompletion; 
+    public List<bool> StepCompletion; 
 
     public SerializableSection()
     {
-        StepsCompletion = Enumerable.Repeat(false, Steps.Count).ToList();
+        StepCompletion = Enumerable.Repeat(false, Steps.Count).ToList();
+    }
+
+
+    public bool IsCompleted()
+    {
+        if( StepCompletion.All(a => a == true))
+        {
+            return true;
+        }
+
+        return false;
     }
 }
 
@@ -39,6 +50,16 @@ public class SerializableStep
     public SerializableStep()
     {
         SubstepCompletion = Enumerable.Repeat(false, Substeps.Count).ToList();
+    }
+
+    public bool IsCompleted()
+    {
+        if (SubstepCompletion.All(a => a == true))
+        {
+            return true;
+        }
+
+        return false;
     }
 }
 
@@ -60,5 +81,15 @@ public class SerializableSubstep
     {
         int index = InteractionObjects.IndexOf(interactableObject);
         InteractionCompletion[index] = true;
+    }
+
+    public bool IsCompleted()
+    {
+        if (InteractionCompletion.All(a => a == true))
+        {
+            return true;
+        }
+
+        return false;
     }
 }
