@@ -11,8 +11,6 @@ public class ActivatableLight : MonoBehaviour, IActivatable
 
     public float IntensityWhenActive;
 
-    public Grippable triggerObject;
-
 	void Start()
     {
         IsActive = StartingStatus;
@@ -37,7 +35,7 @@ public class ActivatableLight : MonoBehaviour, IActivatable
 
     public bool GetActivationStatus()
     {
-        return triggerObject.IsActivated;
+        return this.IsActive;
     }
 
     public void Activate()
