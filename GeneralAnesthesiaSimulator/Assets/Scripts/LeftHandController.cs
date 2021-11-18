@@ -56,6 +56,7 @@ public class LeftHandController : MonoBehaviour
                 if (thisHand.transform.parent != gameObject.transform)
                 {
                     thisHand.transform.SetParent(gameObject.transform, false);
+                    thisHand.EnableRenderer();
                 }
             }
         }
@@ -84,11 +85,13 @@ public class LeftHandController : MonoBehaviour
             if (heldDial != null && thisHand.transform.parent != heldDial.transform)
             {
                 thisHand.transform.SetParent(heldDial.transform, false);
+                thisHand.DisableRenderer();
             }
             MultiSelectionDial heldMultiDial = interactor.selectTarget.gameObject.GetComponent<MultiSelectionDial>();
             if (heldMultiDial != null && thisHand.transform.parent != heldMultiDial.transform)
             {
                 thisHand.transform.SetParent(heldMultiDial.transform, false);
+                thisHand.DisableRenderer();
             }
         }
 
