@@ -504,8 +504,6 @@ GameObject:
   - component: {fileID: 7891670338755854761}
   - component: {fileID: 4939234037773330381}
   - component: {fileID: 6985677678103679912}
-  - component: {fileID: 186063490157227}
-  - component: {fileID: 2826010157983316365}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -594,29 +592,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &186063490157227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794794879362328709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7f4e3ec15b777249a2727b94a2f5b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2826010157983316365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794794879362328709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53de35bb56d523d4198e7b47e4c50738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabletText: {fileID: 1339644300288004938}
-  guideText: {fileID: 186063490157227}
