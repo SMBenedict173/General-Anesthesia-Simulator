@@ -96,6 +96,11 @@ public class SimulationManager : MonoBehaviour
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
             .GetComponent<GuidingLight>().EnableHighlight();
+
+        guideInteractions.Sections[currentSection]
+            .Steps[currentStep].Substeps[currentSubstep]
+            .InteractionObjects[currentInteraction]
+            .GetComponent<Interactable>().SetActive();
     }
 
     private void DisableGuidingLightForCurrent()
@@ -104,6 +109,11 @@ public class SimulationManager : MonoBehaviour
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
             .GetComponent<GuidingLight>().DisableHighlight();
+
+        guideInteractions.Sections[currentSection]
+            .Steps[currentStep].Substeps[currentSubstep]
+            .InteractionObjects[currentInteraction]
+            .GetComponent<Interactable>().SetInactive();
     }
 
     private bool isProcedureComplete()
