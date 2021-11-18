@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sections:
   - isCompleted: 0
-    title: Test
+    title: Emergency Ventilation Equipment
     Steps:
     - description: Verify backup ventilation equipment is available and functioning.
       isCompleted: 0
