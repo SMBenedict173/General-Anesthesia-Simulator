@@ -34,7 +34,7 @@ public class Rotation : MonoBehaviour
 
         }
 
-        Debug.Log(currentRotation);
+        //Debug.Log(currentRotation);
 
 
 

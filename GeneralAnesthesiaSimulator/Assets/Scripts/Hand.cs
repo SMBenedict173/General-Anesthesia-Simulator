@@ -23,6 +23,8 @@ public class Hand : MonoBehaviour
     private string triggerAnimationParameter = "UseHeld";
     private string pressAnimationParameter = "Press";
     public UnityAction grab;
+    [SerializeField]
+    private Renderer renderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -84,5 +86,15 @@ public class Hand : MonoBehaviour
     {
         currentTriggerPoint = Mathf.MoveTowards(currentTriggerPoint, triggerTarget, Time.time * AnimationDelta);
         animator.SetFloat(triggerAnimationParameter, currentTriggerPoint);
+    }
+
+    public void EnableRenderer()
+    {
+        renderer.enabled = true;
+    }
+
+    public void DisableRenderer()
+    {
+        renderer.enabled = false;
     }
 }
