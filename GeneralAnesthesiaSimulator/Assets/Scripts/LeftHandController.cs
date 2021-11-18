@@ -22,6 +22,10 @@ public class LeftHandController : MonoBehaviour
     private XRDirectInteractor interactor;
     private bool isPressing;
 
+    [SerializeField]
+    private InputActionReference completeStep;
+    [SerializeField]
+    private SafetyGuideText safetyGuideText;
     // Start is called before the first frame update
     void Start()
     {
@@ -95,5 +99,10 @@ public class LeftHandController : MonoBehaviour
         }
 
         this.thisHand.SetPress(simulationPressAction.action.ReadValue<float>());
+
+        if (this.completeStep.action.ReadValue<float>() > 0.5)
+        {
+            this.safetyGuideText.CompleteNextItem();
+        }
     }
 }
