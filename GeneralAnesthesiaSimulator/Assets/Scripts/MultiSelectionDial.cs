@@ -55,7 +55,8 @@ public class MultiSelectionDial : MonoBehaviour
 
     public void ChangeSelection()
     {
-        selectionIndex = (selectionIndex - 1) < selectionRotations.Count ? selectionIndex + 1 : 0;
+        Debug.Log(selectionIndex);
+        selectionIndex = (selectionIndex) < selectionRotations.Count - 1 ? selectionIndex + 1 : 0;
         targetRotation = selectionRotations[selectionIndex];
     }
 }

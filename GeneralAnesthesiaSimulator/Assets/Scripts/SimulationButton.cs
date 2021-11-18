@@ -23,7 +23,6 @@ public class SimulationButton : Toggleable
 
 	new public void ToggleActivation()
     {
-        Debug.Log("Morestuff");
 		IsActivated = IsActivated ? false : true;
         if (whatThisToggles != null)
         {
@@ -37,7 +36,6 @@ public class SimulationButton : Toggleable
 	
 	private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Stuff");
 		if (other.gameObject.GetComponent<Hand>() != null)// '!= null' is unnecessary, but it's clear what the intention is
         {
 			pressingHand = other.gameObject.GetComponent<Hand>();

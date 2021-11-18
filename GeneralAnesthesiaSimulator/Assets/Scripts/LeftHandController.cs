@@ -25,9 +25,7 @@ public class LeftHandController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = gameObject.GetComponent<ActionBasedController>();
-        interactor = gameObject.GetComponent<XRDirectInteractor>();
-        this.thisHand = gameObject.GetComponentInChildren<Hand>();
+
     }
 
     // Update is called once per frame
@@ -66,6 +64,7 @@ public class LeftHandController : MonoBehaviour
             if (thisHand.transform.parent != gameObject.transform)
             {
                 thisHand.transform.SetParent(gameObject.transform, false);
+                thisHand.EnableRenderer();
             }
         }
         float activateInputValue = controller.activateAction.action.ReadValue<float>();
