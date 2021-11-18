@@ -8963,7 +8963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsActivated: 0
   OffRotation: 0
-  OnRotation: 90
+  OnRotation: -90
   ThisTransform: {fileID: 7894446145260257705}
   AxisOfRotation: 122
   AnimationDelta: 10
@@ -11974,7 +11974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsActivated: 0
   OffRotation: 0
-  OnRotation: 90
+  OnRotation: -90
   ThisTransform: {fileID: 0}
   AxisOfRotation: 122
   AnimationDelta: 10
@@ -13073,7 +13073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsActivated: 0
   OffRotation: 0
-  OnRotation: 90
+  OnRotation: -90
   ThisTransform: {fileID: 6287434917894959815}
   AxisOfRotation: 122
   AnimationDelta: 10

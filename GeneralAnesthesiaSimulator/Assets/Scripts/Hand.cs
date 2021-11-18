@@ -85,4 +85,14 @@ public class Hand : MonoBehaviour
         currentTriggerPoint = Mathf.MoveTowards(currentTriggerPoint, triggerTarget, Time.time * AnimationDelta);
         animator.SetFloat(triggerAnimationParameter, currentTriggerPoint);
     }
+
+    public void EnableRenderer()
+    {
+        this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+    }
+
+    public void DisableRenderer()
+    {
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+    }
 }
