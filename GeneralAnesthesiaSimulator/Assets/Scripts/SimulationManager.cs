@@ -9,7 +9,7 @@ public class SimulationManager : MonoBehaviour
 {
 
     [SerializeField]
-    public Text guideText;
+    public TextMeshProUGUI guideText;
     public SafetyGuideInteractions guideInteractions;
     public SceneLoader sceneLoader;
 
