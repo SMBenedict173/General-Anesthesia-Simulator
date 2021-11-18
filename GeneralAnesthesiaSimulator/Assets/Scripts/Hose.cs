@@ -22,5 +22,8 @@ public class Hose : MonoBehaviour
         isConnectedToSource = (interactableEnd.connectedTo == source ) ? true : false;
     }
 
-    
+    public bool GetConnectionStatus()
+    {
+        return this.isConnectedToSource;
+    }
 }
