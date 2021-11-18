@@ -1,10 +1,8 @@
 ﻿using System.Collections;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[Serializable]
 public class SafetyGuideText : MonoBehaviour
 {
     public List<Section> safetySections;
