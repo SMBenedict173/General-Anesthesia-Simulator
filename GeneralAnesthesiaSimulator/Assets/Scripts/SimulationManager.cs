@@ -9,7 +9,7 @@ public class SimulationManager : MonoBehaviour
 {
 
     [SerializeField]
-    public TextMeshProUGUI guideText;
+    public Text guideText;
     public SafetyGuideInteractions guideInteractions;
     public SceneLoader sceneLoader;
 
@@ -23,7 +23,6 @@ public class SimulationManager : MonoBehaviour
     void Start()
     {
         guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
-
     }
 
     // Update is called once per frame
