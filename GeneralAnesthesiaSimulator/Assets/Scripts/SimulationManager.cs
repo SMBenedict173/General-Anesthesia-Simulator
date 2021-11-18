@@ -1,16 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SimulationManager : MonoBehaviour
 {
 
     [SerializeField]
-    public SafetyGuideText guideText;
-
-    [SerializeField]
+    public TextMeshProUGUI guideText;
     public SafetyGuideInteractions guideInteractions;
+    public SceneLoader sceneLoader;
 
 
     private int currentSection = 0;
@@ -21,8 +22,7 @@ public class SimulationManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        guideText = new SafetyGuideText();
-        guideInteractions = new SafetyGuideInteractions();
+        guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
 
     }
 
@@ -35,14 +35,34 @@ public class SimulationManager : MonoBehaviour
             DisableGuidingLightForCurrent();
             currentInteraction += 1;
 
-            UpdateIndexesAndText();
-            EnableGuidingLightForCurrent();
+            if (isProcedureComplete())
+            {
+                //autocomplete procedure 
+
+                // change scene to review
+                sceneLoader.NextScene();
+            }
+            else
+            {
+                //update text
+                guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
+
+                EnableGuidingLightForCurrent();
+            }
+
         }
 
     }
 
-    private void UpdateIndexesAndText()
+    public void TestingText()
     {
+        currentInteraction += 1;
+        UpdateIndexes();
+    }
+
+    private void UpdateIndexes()
+    {
+        // update indexes 
         if (guideInteractions.Sections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted())
         {
             currentSubstep += 1;
@@ -85,5 +105,11 @@ public class SimulationManager : MonoBehaviour
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
             .GetComponent<GuidingLight>().DisableHighlight();
+    }
+
+    private bool isProcedureComplete()
+    {
+        return guideInteractions.Sections[currentSection - 1].IsCompleted()
+            && currentSection == guideInteractions.Sections.Count;
     }
 }
