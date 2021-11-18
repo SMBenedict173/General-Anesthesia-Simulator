@@ -170,14 +170,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "CompleteStep",
-                    "type": "Button",
-                    "id": "c11e8f57-be36-4793-983f-e6286550c3dc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -530,17 +522,6 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Open Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "60c12cec-75a0-4b55-83d3-a2e3a7d3349c",
-                    "path": "<XRController>{LeftHand}/secondaryButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller;Continuous Move",
-                    "action": "CompleteStep",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
