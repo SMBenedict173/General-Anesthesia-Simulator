@@ -1,0 +1,381 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &70430320921130614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70430320921130600}
+  - component: {fileID: 70430320921130615}
+  m_Layer: 0
+  m_Name: Interactions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &70430320921130600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70430320921130614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1221335328743618907}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70430320921130615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70430320921130614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e735f5a6a64c634eb2ed42511a4796e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sections:
+  - isCompleted: 0
+    title: Test
+    Steps:
+    - description: Verify backup ventilation equipment is available and functioning.
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: verify
+        InteractionObjects: []
+  - isCompleted: 0
+    title: High-Pressure System
+    Steps:
+    - description: Check Oxygen Cylinder Supply
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Open cylinder and verify at least half full(about 1000 psi).
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Close cylinder.
+        InteractionObjects: []
+    - description: Check Central Pipeline Supplies; Check that hoses are connected
+        and pipeline gauges read about 50 psi.
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: hoses
+        InteractionObjects: []
+      - isCompleted: 0
+        description: gauges
+        InteractionObjects: []
+  - isCompleted: 0
+    title: Low-Pressure System
+    Steps:
+    - description: Check Initial Status of Low Pressure System
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Close flow control valves and turn vaporizers off.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Check fill level and tighten vaporizers' filler caps.
+        InteractionObjects: []
+    - description: Perform Leak Check of Machine Low Pressure System
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Verify that the machine master switch and flow control valves
+          are OFF.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Attach \"Suction Bulb\" to common Fresh) gas outlet.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Squeeze bulb repeatedly until fully collapsed.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Verify bulb stays fully collapsed for at least 10 seconds.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Open one vaporizer at a time and repeat 'c' and 'd' as above.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Remove suction bulb, and reconnect fresh gas hose.
+        InteractionObjects: []
+    - description: Turn On Machine Master Switch and all other necessary electrical
+        equipment.
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Turn On
+        InteractionObjects: []
+    - description: Test Flowmeters
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Adjust flow of all gases through their full range, checking
+          for smooth operation of floats and undamaged flowtubes.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Attempt to create a hypoxic 02 / N20 mixture and verify correct
+          changes in flow and / or alarm.
+        InteractionObjects: []
+  - isCompleted: 0
+    title: Scavenging System
+    Steps:
+    - description: Adjust and Check Scavenging System
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Ensure proper connections between the scavenging system and
+          both APL (pop-oft) valve and ventilator relief valve.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Adjust waste gas vacuum (if possible).
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Fully open APL valve and occlude Y - piece.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: With minimum 02 flow, allow scavenger reservoir bag to collapse
+          completely and verify that absorber pressure gauge reads about zero.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: With the 02 flush activated allow the scavenger reservoir bag
+          to distend fully, and then verify that absorber pressure gauge reads <
+          10 cm H20.
+        InteractionObjects: []
+  - isCompleted: 0
+    title: Breathing System
+    Steps:
+    - description: Calibrate 02 Monitor
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Ensure monitor reads 21% in room air.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Verify low 02 alarm is enabled and functioning.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Reinstall sensor in circuit and flush breathing system with
+          02.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Verify that monitor now reads greater than 90%.
+        InteractionObjects: []
+    - description: Check Initial Status of Breathing System
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Set selector switch to \"Bag\" mode.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Check that breathing circuit is complete, undamaged and unobstructed.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Verify that CO2 absorbent is adequate.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Install breathing circuit accessory equipment(e.g.humidifier,
+          PEEP valve) to be used during the case.
+        InteractionObjects: []
+    - description: Perform Leak Check of the Breathing System
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Set all gas flows to zero(or minimum).
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Close APL(pop-off) valve and occlude Y-piece.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Pressurize breathing system to about 30 cm H20 with 02 flush.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Ensure that pressure remains fixed for at least 10 seconds.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Open APL(Pop - off) valve and ensure that pressure decreases.
+        InteractionObjects: []
+  - isCompleted: 0
+    title: Manual and Automatic Ventilation Systems
+    Steps:
+    - description: Test Ventilation Systems and Unidirectional Valves
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Place a second breathing bag on Y-piece.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Set appropriate ventilator parameters for next patient.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Switch to automatic ventilation (Ventilator) mode.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Fill bellows and breathing bag with 02 flush and then turn ventilator
+          ON.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Set 02 flow to minimum, other gas flows to zero."),                
+          new SerializableSubstep("Verify that during inspiration bellows delivers
+          appropriate tidal volume and that during expiration bellows fills completely.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Set fresh gas flow to about 5 L / min.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Verify that the ventilator bellows and simulated lungs fill
+          and empty appropriately without sustained pressure at end expiration.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Check for proper action of unidirectional valves.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Exercise breathing circuit accessories to ensure proper function.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Turn ventilator OFF and switch to manual ventilation(Bag/ APL)
+          mode.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Ventilate manually and assure inflation and deflation of artificial
+          lungs and appropriate feel of system resistance and compliance.
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Remove second breathing bag from Y-piece.
+        InteractionObjects: []
+  - isCompleted: 0
+    title: Monitors
+    Steps:
+    - description: 'Check, Calibrate and/or Set Alarm Limits of all Monitors: Capnometer,
+        Pulse Oximeter, Oxygen Analyzer Respiratory-Volume Monitor (Spirometer),
+        Pressure Monitor with High and Low Airway Alarms.'
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Check
+        InteractionObjects: []
+  - isCompleted: 0
+    title: Final Position
+    Steps:
+    - description: Check Final Status of Machine
+      isCompleted: 0
+      Substeps:
+      - isCompleted: 0
+        description: Vaporizers off
+        InteractionObjects: []
+      - isCompleted: 0
+        description: APL valve open
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Selector switch to \"Bag\"
+        InteractionObjects: []
+      - isCompleted: 0
+        description: All flowmeters to zero
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Patient suction level adequate
+        InteractionObjects: []
+      - isCompleted: 0
+        description: Breathing system ready to use
+        InteractionObjects: []
+--- !u!1 &1373209354522203535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1221335328743618907}
+  - component: {fileID: 70430319653117688}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1221335328743618907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373209354522203535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.22000003, y: 1.1200168, z: -7.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 70430320921130600}
+  - {fileID: 2591042725062136190}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70430319653117688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373209354522203535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4463b9bfc207604b89da2db3364d475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guideText: {fileID: 0}
+  guideInteractions: {fileID: 70430320921130615}
+  sceneLoader: {fileID: 833889511926248101}
+--- !u!1 &2830823790571328986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2591042725062136190}
+  - component: {fileID: 833889511926248101}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2591042725062136190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830823790571328986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1221335328743618907}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833889511926248101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830823790571328986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8688f46164a4bc94c9bab8cdc9600661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
