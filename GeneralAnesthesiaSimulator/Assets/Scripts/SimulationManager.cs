@@ -100,6 +100,11 @@ public class SimulationManager : MonoBehaviour
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
+            .GetComponent<Interactable>().SetIncomplete();
+
+        guideInteractions.Sections[currentSection]
+            .Steps[currentStep].Substeps[currentSubstep]
+            .InteractionObjects[currentInteraction]
             .GetComponent<Interactable>().SetActive();
     }
 

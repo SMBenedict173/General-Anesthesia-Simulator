@@ -14,6 +14,11 @@ public class Interactable : MonoBehaviour
             this.completedInteraction = true;
     }
 
+    public void SetIncomplete()
+    {
+        this.completedInteraction = false;
+    }
+
     public bool GetCompletedInteraction()
     {
         return this.completedInteraction;
