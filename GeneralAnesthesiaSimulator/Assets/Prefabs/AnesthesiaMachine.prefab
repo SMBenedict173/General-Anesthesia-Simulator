@@ -5148,7 +5148,7 @@ Transform:
   m_GameObject: {fileID: 2472430260571790400}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.28698605, y: 1.2635969, z: 0.37193397}
-  m_LocalScale: {x: 0.644014, y: 0.64401376, z: 0.67067075}
+  m_LocalScale: {x: -0.644014, y: 0.64401376, z: 0.67067075}
   m_Children:
   - {fileID: 7275434525163121153}
   - {fileID: 634988913794518583}
@@ -5354,7 +5354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsActivated: 0
   OffRotation: 0
-  OnRotation: -90
+  OnRotation: 90
   ThisTransform: {fileID: 1748281729271990202}
   AxisOfRotation: 122
   AnimationDelta: 10
@@ -10088,7 +10088,7 @@ Transform:
   m_GameObject: {fileID: 4550938919305502922}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.14818165, y: 1.2635969, z: 0.37193397}
-  m_LocalScale: {x: 0.644014, y: 0.6440139, z: 0.67067087}
+  m_LocalScale: {x: -0.644014, y: 0.6440139, z: 0.67067087}
   m_Children:
   - {fileID: 695616306378820452}
   - {fileID: 3066953240767748107}
@@ -10294,7 +10294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsActivated: 0
   OffRotation: 0
-  OnRotation: -90
+  OnRotation: 90
   ThisTransform: {fileID: 0}
   AxisOfRotation: 122
   AnimationDelta: 10
