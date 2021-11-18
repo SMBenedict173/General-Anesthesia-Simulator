@@ -152,6 +152,9 @@ public class SerializableStep
     {
         string s = description;
 
+        if(Substeps.Count == 0)
+            return s;
+
         foreach (var substep in Substeps)
         {
             s += "\n<margin=2em>" + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
@@ -169,6 +172,9 @@ public class SerializableStep
             s += description;
         else
             s += "<color=green> " + description + " </color>";
+
+        if (Substeps.Count == 0)
+            return s;
 
         foreach (var substep in Substeps)
         {
