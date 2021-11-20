@@ -39,6 +39,7 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
                 if (thisHand.transform.parent != gameObject.transform)
                 {
                     thisHand.transform.SetParent(gameObject.transform, false);
+                    thisHand.EnableRenderer();
                 }
             }
         }
@@ -48,6 +49,7 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
             if (thisHand.transform.parent != gameObject.transform)
             {
                 thisHand.transform.SetParent(gameObject.transform, false);
+                thisHand.EnableRenderer();
             }
         }
         float activateInputValue = controller.activateAction.action.ReadValue<float>();
@@ -67,8 +69,14 @@ public class RightHandController : MonoBehaviour//, XRIDefaultInputActions.IXRIR
             if (heldDial != null && thisHand.transform.parent != heldDial.transform)
             {
                 thisHand.transform.SetParent(heldDial.transform, false);
+                thisHand.DisableRenderer();
             }
-            
+            MultiSelectionDial heldMultiDial = interactor.selectTarget.gameObject.GetComponent<MultiSelectionDial>();
+            if (heldMultiDial != null && thisHand.transform.parent != heldMultiDial.transform)
+            {
+                thisHand.transform.SetParent(heldMultiDial.transform, false);
+                thisHand.DisableRenderer();
+            }
         }
 
         this.thisHand.SetPress(simulationPressAction.action.ReadValue<float>());

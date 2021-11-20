@@ -1,11 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-public class ActivatableLight : MonoBehaviour, IActivatable
+public class ActivatableLight : Toggleable
 {
 	public bool StartingStatus;
-
-    private bool IsActive;
 
     public Light ThisLight;
 
@@ -13,38 +11,22 @@ public class ActivatableLight : MonoBehaviour, IActivatable
 
 	void Start()
     {
-        IsActive = StartingStatus;
-    }
-
-    void Update()
-    {
-        bool previousActivationStatus = IsActive;
-        IsActive = GetActivationStatus();
-
-        if (!previousActivationStatus && IsActive)
+        IsActivated = StartingStatus;
+        if (IsActivated)
         {
             Activate();
         }
-
-        if (previousActivationStatus && !IsActive)
-        {
-            DeActivate();
-        }
-
     }
 
-    public bool GetActivationStatus()
-    {
-        return this.IsActive;
-    }
-
-    public void Activate()
+    protected override void Activate()
     {
         ThisLight.intensity = IntensityWhenActive;
+        IsActivated = true;
     }
 
-    public void DeActivate()
+    protected override void Deactivate()
     {
         ThisLight.intensity = 0F;
+        IsActivated = false;
     }
 }

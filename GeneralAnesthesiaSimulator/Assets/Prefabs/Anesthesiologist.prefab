@@ -1359,6 +1359,10 @@ PrefabInstance:
       value: RightHand
       objectReference: {fileID: 0}
     - target: {fileID: 6364237589647733896, guid: 707873e8801a735469788373cb3b7b8b, type: 3}
+      propertyPath: renderer
+      value: 
+      objectReference: {fileID: 5557666946277887379}
+    - target: {fileID: 6364237589647733896, guid: 707873e8801a735469788373cb3b7b8b, type: 3}
       propertyPath: AnimationDelta
       value: 100
       objectReference: {fileID: 0}
@@ -1408,11 +1412,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 707873e8801a735469788373cb3b7b8b, type: 3}
---- !u!4 &7982617613148947509 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6487735123065845920, guid: 707873e8801a735469788373cb3b7b8b, type: 3}
-  m_PrefabInstance: {fileID: 3805230336081607829}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7826328758260533277 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6364237589647733896, guid: 707873e8801a735469788373cb3b7b8b, type: 3}

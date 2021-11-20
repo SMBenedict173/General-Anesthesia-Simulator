@@ -479,6 +479,7 @@ GameObject:
   - component: {fileID: 6487735123065845920}
   - component: {fileID: 930341232756384474}
   - component: {fileID: 6364237589647733896}
+  - component: {fileID: 2318790604755401948}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -535,6 +536,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 930341232756384474}
   AnimationDelta: 10
+  fingerTip: {fileID: 2318790604755401948}
+--- !u!135 &2318790604755401948
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855453658029384218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.03
+  m_Center: {x: 0.01, y: 0.02, z: 0.1}
 --- !u!1 &6253019915916976276
 GameObject:
   m_ObjectHideFlags: 0
