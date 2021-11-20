@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
     private bool completedInteraction = false;
     private bool isActive = false;
 
+
     public void CompleteInteraction()
     {
         if (isActive)
