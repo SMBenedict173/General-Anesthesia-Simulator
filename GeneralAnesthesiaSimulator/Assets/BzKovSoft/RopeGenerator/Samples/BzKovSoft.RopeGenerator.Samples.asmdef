@@ -1,0 +1,14 @@
+{
+    "name": "BzKovSoft.RopeGenerator.Samples",
+    "references": [
+        "BzKovSoft.RopeGenerator"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

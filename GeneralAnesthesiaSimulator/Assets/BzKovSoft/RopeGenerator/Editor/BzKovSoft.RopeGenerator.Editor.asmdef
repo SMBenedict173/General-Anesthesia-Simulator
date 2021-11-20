@@ -1,0 +1,16 @@
+{
+    "name": "BzKovSoft.RopeGenerator.Editor",
+    "references": [
+        "BzKovSoft.RopeGenerator"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
