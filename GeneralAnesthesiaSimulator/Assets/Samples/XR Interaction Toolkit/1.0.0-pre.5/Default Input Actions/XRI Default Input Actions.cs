@@ -183,6 +183,14 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""CompleteStep"",
+                    ""type"": ""Button"",
+                    ""id"": ""c11e8f57-be36-4793-983f-e6286550c3dc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -535,6 +543,17 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Generic XR Controller"",
                     ""action"": ""Open Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""60c12cec-75a0-4b55-83d3-a2e3a7d3349c"",
+                    ""path"": ""<XRController>{LeftHand}/secondaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Generic XR Controller;Continuous Move"",
+                    ""action"": ""CompleteStep"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1073,6 +1092,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         m_XRILeftHand_TranslateAnchor = m_XRILeftHand.FindAction("Translate Anchor", throwIfNotFound: true);
         m_XRILeftHand_SimulationPress = m_XRILeftHand.FindAction("SimulationPress", throwIfNotFound: true);
         m_XRILeftHand_OpenMenu = m_XRILeftHand.FindAction("Open Menu", throwIfNotFound: true);
+        m_XRILeftHand_CompleteStep = m_XRILeftHand.FindAction("CompleteStep", throwIfNotFound: true);
         // XRI RightHand
         m_XRIRightHand = asset.FindActionMap("XRI RightHand", throwIfNotFound: true);
         m_XRIRightHand_Position = m_XRIRightHand.FindAction("Position", throwIfNotFound: true);
@@ -1194,6 +1214,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_XRILeftHand_TranslateAnchor;
     private readonly InputAction m_XRILeftHand_SimulationPress;
     private readonly InputAction m_XRILeftHand_OpenMenu;
+    private readonly InputAction m_XRILeftHand_CompleteStep;
     public struct XRILeftHandActions
     {
         private @XRIDefaultInputActions m_Wrapper;
@@ -1213,6 +1234,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         public InputAction @TranslateAnchor => m_Wrapper.m_XRILeftHand_TranslateAnchor;
         public InputAction @SimulationPress => m_Wrapper.m_XRILeftHand_SimulationPress;
         public InputAction @OpenMenu => m_Wrapper.m_XRILeftHand_OpenMenu;
+        public InputAction @CompleteStep => m_Wrapper.m_XRILeftHand_CompleteStep;
         public InputActionMap Get() { return m_Wrapper.m_XRILeftHand; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1267,6 +1289,9 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 @OpenMenu.started -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnOpenMenu;
                 @OpenMenu.performed -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnOpenMenu;
                 @OpenMenu.canceled -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnOpenMenu;
+                @CompleteStep.started -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnCompleteStep;
+                @CompleteStep.performed -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnCompleteStep;
+                @CompleteStep.canceled -= m_Wrapper.m_XRILeftHandActionsCallbackInterface.OnCompleteStep;
             }
             m_Wrapper.m_XRILeftHandActionsCallbackInterface = instance;
             if (instance != null)
@@ -1316,6 +1341,9 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 @OpenMenu.started += instance.OnOpenMenu;
                 @OpenMenu.performed += instance.OnOpenMenu;
                 @OpenMenu.canceled += instance.OnOpenMenu;
+                @CompleteStep.started += instance.OnCompleteStep;
+                @CompleteStep.performed += instance.OnCompleteStep;
+                @CompleteStep.canceled += instance.OnCompleteStep;
             }
         }
     }
@@ -1506,6 +1534,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         void OnTranslateAnchor(InputAction.CallbackContext context);
         void OnSimulationPress(InputAction.CallbackContext context);
         void OnOpenMenu(InputAction.CallbackContext context);
+        void OnCompleteStep(InputAction.CallbackContext context);
     }
     public interface IXRIRightHandActions
     {

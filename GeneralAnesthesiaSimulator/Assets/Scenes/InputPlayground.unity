@@ -289,11 +289,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6695e6df18175e04b8019fe49105c87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisTransform: {fileID: 427759059}
   IsActivated: 0
   OffRotation: 0
   OnRotation: 180
-  AnimationDelta: 2
+  ThisTransform: {fileID: 427759059}
+  AxisOfRotation: 121
+  AnimationDelta: 10
 --- !u!114 &427759063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,10 +610,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c124c9db436b643ad3d7ddd46444c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsActivated: 0
   StartingStatus: 0
   ThisLight: {fileID: 879170136}
   IntensityWhenActive: 100
-  triggerObject: {fileID: 427759062}
 --- !u!108 &879170136
 Light:
   m_ObjectHideFlags: 0

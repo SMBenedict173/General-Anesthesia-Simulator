@@ -22,12 +22,14 @@ public class LeftHandController : MonoBehaviour
     private XRDirectInteractor interactor;
     private bool isPressing;
 
+    [SerializeField]
+    private InputActionReference completeStep;
+    [SerializeField]
+    private SafetyGuideText safetyGuideText;
     // Start is called before the first frame update
     void Start()
     {
-        controller = gameObject.GetComponent<ActionBasedController>();
-        interactor = gameObject.GetComponent<XRDirectInteractor>();
-        this.thisHand = gameObject.GetComponentInChildren<Hand>();
+
     }
 
     // Update is called once per frame
@@ -56,6 +58,7 @@ public class LeftHandController : MonoBehaviour
                 if (thisHand.transform.parent != gameObject.transform)
                 {
                     thisHand.transform.SetParent(gameObject.transform, false);
+                    thisHand.EnableRenderer();
                 }
             }
         }
@@ -65,6 +68,7 @@ public class LeftHandController : MonoBehaviour
             if (thisHand.transform.parent != gameObject.transform)
             {
                 thisHand.transform.SetParent(gameObject.transform, false);
+                thisHand.EnableRenderer();
             }
         }
         float activateInputValue = controller.activateAction.action.ReadValue<float>();
@@ -84,9 +88,21 @@ public class LeftHandController : MonoBehaviour
             if (heldDial != null && thisHand.transform.parent != heldDial.transform)
             {
                 thisHand.transform.SetParent(heldDial.transform, false);
+                thisHand.DisableRenderer();
+            }
+            MultiSelectionDial heldMultiDial = interactor.selectTarget.gameObject.GetComponent<MultiSelectionDial>();
+            if (heldMultiDial != null && thisHand.transform.parent != heldMultiDial.transform)
+            {
+                thisHand.transform.SetParent(heldMultiDial.transform, false);
+                thisHand.DisableRenderer();
             }
         }
 
         this.thisHand.SetPress(simulationPressAction.action.ReadValue<float>());
+
+        if (this.completeStep.action.ReadValue<float>() > 0.5)
+        {
+            this.safetyGuideText.CompleteNextItem();
+        }
     }
 }
