@@ -23,40 +23,29 @@ public class SimulationManager : MonoBehaviour
     void Start()
     {
         guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
+        EnableGuidingLightForCurrent();
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         // check if the interaction was completed 
         if (IsCurrentInteractionComplete())
         {
             DisableGuidingLightForCurrent();
             currentInteraction += 1;
 
-            if (isProcedureComplete())
-            {
-                //autocomplete procedure 
+            //update indexing
+            UpdateIndexes();
 
-                // change scene to review
-                sceneLoader.NextScene();
-            }
-            else
-            {
-                //update text
-                guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
+            guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
 
-                EnableGuidingLightForCurrent();
-            }
+            EnableGuidingLightForCurrent();
+
+
 
         }
 
-    }
-
-    public void TestingText()
-    {
-        currentInteraction += 1;
-        UpdateIndexes();
     }
 
     private void UpdateIndexes()
@@ -79,6 +68,12 @@ public class SimulationManager : MonoBehaviour
                 }
             }
         }
+
+        //check completed
+        if (currentSection == 8)
+        {
+            sceneLoader.Tester();
+        }
     }
 
     private bool IsCurrentInteractionComplete()
@@ -92,10 +87,12 @@ public class SimulationManager : MonoBehaviour
 
     private void EnableGuidingLightForCurrent()
     {
+        /*
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
             .GetComponent<GuidingLight>().EnableHighlight();
+        */
 
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
@@ -110,10 +107,12 @@ public class SimulationManager : MonoBehaviour
 
     private void DisableGuidingLightForCurrent()
     {
+        /*
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
             .GetComponent<GuidingLight>().DisableHighlight();
+        */
 
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
@@ -121,9 +120,4 @@ public class SimulationManager : MonoBehaviour
             .GetComponent<Interactable>().SetInactive();
     }
 
-    private bool isProcedureComplete()
-    {
-        return guideInteractions.Sections[currentSection - 1].IsCompleted()
-            && currentSection == guideInteractions.Sections.Count;
-    }
 }

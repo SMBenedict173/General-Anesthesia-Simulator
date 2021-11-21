@@ -43,6 +43,7 @@ public class ValveDial : Toggleable
         }
         
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * AnimationDelta);
+
     }
      
 
