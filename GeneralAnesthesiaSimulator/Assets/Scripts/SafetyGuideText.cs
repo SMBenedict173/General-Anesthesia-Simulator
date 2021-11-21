@@ -7,13 +7,11 @@ using UnityEngine;
 [Serializable]
 public class SafetyGuideText : MonoBehaviour
 {
-    public List<Section> safetySections { get; }
-    public int currentSectionIndex { get; set; }
+    public List<Section> safetySections;
 
     public SafetyGuideText()
     {
         safetySections = new List<Section>();
-        currentSectionIndex = 0;
 
         safetySections.Add(new Section("Emergency Ventilation Equipment", new List<Step>() {
             new Step("Verify backup ventilation equipment is available and functioning.")
@@ -35,14 +33,7 @@ public class SafetyGuideText : MonoBehaviour
                 new Step("Attach \"Suction Bulb\" to common Fresh) gas outlet."),
                 new Step("Squeeze bulb repeatedly until fully collapsed."),
                 new Step("Verify bulb stays fully collapsed for at least 10 seconds."),
-                new Step("Open one vaporizer at a time and repeat 'c' and 'd' as above.", new List<Step>(){
-                        new Step("Open vaporizer 1"),
-                        new Step("Squeeze bulb repeatedly until fully collapsed."),
-                        new Step("Verify bulb stays fully collapsed for at least 10 seconds."),
-                        new Step("Open vaporizer 2"),
-                        new Step("Squeeze bulb repeatedly until fully collapsed."),
-                        new Step("Verify bulb stays fully collapsed for at least 10 seconds.")
-                }),
+                new Step("Open one vaporizer at a time and repeat 'c' and 'd' as above."),
                 new Step("Remove suction bulb, and reconnect fresh gas hose.")
             }),
             new Step("Turn On Machine Master Switch and all other necessary electrical equipment."),
@@ -56,7 +47,7 @@ public class SafetyGuideText : MonoBehaviour
             new Step("Adjust and Check Scavenging System", new List<Step>{
                 new Step("Ensure proper connections between the scavenging system and both APL (pop-oft) valve and ventilator relief valve."),
                 new Step("Adjust waste gas vacuum (if possible)."),
-                new Step("Fury open APL valve and occlude Y - pTece."),
+                new Step("Fully open APL valve and occlude Y - pTece."),
                 new Step("With minimum 02 flow, allow scavenger reservoir bag to collapse completely and verify that absorber pressure gauge reads about zero."),
                 new Step("With the 02 flush activated allow the scavenger reservoir bag to distend fully, and then verify that absorber pressure gauge reads < 10 cm H20.")
             })
@@ -147,40 +138,29 @@ public class SafetyGuideText : MonoBehaviour
         return s;
     }
 
-    public void CompleteNextItem()
+    public string GetSectionString(int index)
     {
-        safetySections[currentSectionIndex].CompleteNextItem();
-
-        if (safetySections[currentSectionIndex].completed)
-            currentSectionIndex++;
+        return safetySections[index].ToString();
     }
 
-    public string GetSectionString()
+    public string GetSectionStringFormatted(int index)
     {
-        return safetySections[currentSectionIndex].ToString();
-    }
-
-    public string GetSectionStringFormatted()
-    {
-        return safetySections[currentSectionIndex].ToStringFormatted();
+        return safetySections[index].ToStringFormatted();
     }
 }
 
 public class Section
 {
-    public string title { get; set; }
+    public string title;
 
     public List<Step> steps;
-
-    public int currentStepIndex { get; set; }
-    public bool completed { get; set; }
+    public bool completed;
 
     public Section(string title, List<Step> steps)
     {
         this.title = title;
         this.steps = steps;
         this.completed = false;
-        this.currentStepIndex = 0;
     }
 
     public string GetCurrentStep()
@@ -224,42 +204,26 @@ public class Section
 
         return s;
     }
-
-    public void CompleteNextItem()
-    {
-        steps[currentStepIndex].CompleteNextItem();
-
-        if (steps[currentStepIndex].substeps.All(substep => substep.completed))
-            currentStepIndex += 1;
-
-        if (steps.All(step => step.completed))
-            this.completed = true;
-
-    }
 }
 
 public class Step
 {
-    public string description { get; set; }
-    public bool completed { get; set; }
+    public string description;
+    public bool completed;
 
     public List<Step> substeps;
-
-    public int currentSubStepIndex { get; set; }
 
     public Step(string description)
     {
         this.description = description;
         this.substeps = new List<Step>();
         this.completed = false;
-        this.currentSubStepIndex = 0;
     }
     public Step(string description, List<Step> substeps)
     {
         this.description = description;
         this.substeps = substeps;
         this.completed = false;
-        this.currentSubStepIndex = 0;
     }
 
     override public string ToString()
@@ -308,30 +272,4 @@ public class Step
 
         return "Step Completed";
     }
-
-    public void CompleteNextItem()
-    {
-        if (substeps.Count == 0)
-        {
-            completed = true;
-            return;
-        }
-
-        for(int i = 0; i < substeps.Count; i++)
-        {
-            if (!substeps[i].completed)
-            {
-                substeps[i].completed = true;
-                currentSubStepIndex += 1;
-                break;
-            }
-        }
-
-        if(substeps.All(step => step.completed))
-        {
-            completed = true;
-        }
-    }
-
-
 }

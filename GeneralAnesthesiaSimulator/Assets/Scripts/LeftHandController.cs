@@ -99,10 +99,5 @@ public class LeftHandController : MonoBehaviour
         }
 
         this.thisHand.SetPress(simulationPressAction.action.ReadValue<float>());
-
-        if (this.completeStep.action.ReadValue<float>() > 0.5)
-        {
-            this.safetyGuideText.CompleteNextItem();
-        }
     }
 }

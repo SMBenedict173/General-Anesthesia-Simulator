@@ -537,6 +537,7 @@ MonoBehaviour:
   animator: {fileID: 930341232756384474}
   AnimationDelta: 10
   fingerTip: {fileID: 2318790604755401948}
+  renderer: {fileID: 8786004385462087942}
 --- !u!135 &2318790604755401948
 SphereCollider:
   m_ObjectHideFlags: 0

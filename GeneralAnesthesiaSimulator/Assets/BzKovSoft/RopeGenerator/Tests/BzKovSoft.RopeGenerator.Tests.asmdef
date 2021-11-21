@@ -1,0 +1,16 @@
+{
+    "name": "BzKovSoft.RopeGenerator.Tests",
+    "references": [
+        "BzKovSoft.RopeGenerator"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
