@@ -8,11 +8,19 @@ public class Interactable : MonoBehaviour
     private bool completedInteraction = false;
     private bool isActive = false;
 
+    private int interactionsNecessary;
+    private int interactionsCompleted; 
+
 
     public void CompleteInteraction()
     {
         if (isActive)
-            this.completedInteraction = true;
+        {
+            interactionsCompleted += 1;
+
+            if (interactionsCompleted == interactionsNecessary)
+                this.completedInteraction = true;
+        }
     }
 
     public void SetIncomplete()
