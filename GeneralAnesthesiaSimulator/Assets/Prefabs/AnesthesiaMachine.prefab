@@ -4065,6 +4065,7 @@ GameObject:
   - component: {fileID: 6845888095233157839}
   - component: {fileID: 7855545996060021807}
   - component: {fileID: 7594746125365024109}
+  - component: {fileID: 136651201751065703}
   m_Layer: 0
   m_Name: o2_flush_green
   m_TagString: Untagged
@@ -4166,6 +4167,20 @@ MonoBehaviour:
   whatThisToggles: {fileID: 0}
   offMaterial: {fileID: 0}
   onMaterial: {fileID: 0}
+--- !u!114 &136651201751065703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922395217507455024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsNecessary: 1
+  interactionsCompleted: 0
 --- !u!1 &1940831810434718553
 GameObject:
   m_ObjectHideFlags: 0
@@ -5132,6 +5147,7 @@ GameObject:
   - component: {fileID: 1906214598548077841}
   - component: {fileID: 2077148970767348593}
   - component: {fileID: 1015090594554396658}
+  - component: {fileID: 1231219519227909844}
   m_Layer: 0
   m_Name: purple_cylinder_knob
   m_TagString: Untagged
@@ -5273,6 +5289,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1231219519227909844}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CompleteInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -5372,6 +5400,20 @@ CapsuleCollider:
   m_Height: 0.16341309
   m_Direction: 1
   m_Center: {x: -0.00013257936, y: 3.12364e-16, z: 0.021980667}
+--- !u!114 &1231219519227909844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2472430260571790400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsNecessary: 1
+  interactionsCompleted: 0
 --- !u!1 &2484862087236580350
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,7 +7564,7 @@ Transform:
   m_GameObject: {fileID: 3380438183342944169}
   m_LocalRotation: {x: -0.7070985, y: -0.0034334627, z: -0.0034334636, w: 0.7070985}
   m_LocalPosition: {x: 0.52, y: 1.0268447, z: 0.339}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 2}
   m_Children: []
   m_Father: {fileID: 7728494162746390883}
   m_RootOrder: 25
@@ -8958,6 +9000,7 @@ GameObject:
   - component: {fileID: 8178744076951649828}
   - component: {fileID: 818853468668637516}
   - component: {fileID: 6850738248036609180}
+  - component: {fileID: 2777734810552115458}
   m_Layer: 0
   m_Name: air_knob
   m_TagString: Untagged
@@ -9115,6 +9158,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2777734810552115458}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CompleteInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -9196,6 +9251,20 @@ CapsuleCollider:
   m_Height: 0.02
   m_Direction: 2
   m_Center: {x: 0.000015304422, y: 0, z: 0.0090149315}
+--- !u!114 &2777734810552115458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059245794976208110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsNecessary: 1
+  interactionsCompleted: 0
 --- !u!1 &4061657232325663369
 GameObject:
   m_ObjectHideFlags: 0
@@ -10153,6 +10222,7 @@ GameObject:
   - component: {fileID: 3995856019430735405}
   - component: {fileID: 2779983967027493102}
   - component: {fileID: 5657721192840507579}
+  - component: {fileID: 4517667306878638720}
   m_Layer: 0
   m_Name: yellow_cylinder_knob
   m_TagString: Untagged
@@ -10294,6 +10364,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4517667306878638720}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CompleteInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -10393,6 +10475,20 @@ CapsuleCollider:
   m_Height: 0.16341309
   m_Direction: 1
   m_Center: {x: -0.00013257936, y: 0, z: 0.021980664}
+--- !u!114 &4517667306878638720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550938919305502922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsNecessary: 1
+  interactionsCompleted: 0
 --- !u!1 &4598308148781497629
 GameObject:
   m_ObjectHideFlags: 0
@@ -11835,6 +11931,7 @@ GameObject:
   - component: {fileID: 4221636153272571439}
   - component: {fileID: 1596445735115832222}
   - component: {fileID: 9189850116292028225}
+  - component: {fileID: 2275049646745098386}
   m_Layer: 0
   m_Name: knob
   m_TagString: Untagged
@@ -11974,6 +12071,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2275049646745098386}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CompleteInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -12073,6 +12182,20 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0.000015304422, y: 0, z: 0.0090149315}
+--- !u!114 &2275049646745098386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5300741357715605992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsNecessary: 1
+  interactionsCompleted: 0
 --- !u!1 &5351223634333313410
 GameObject:
   m_ObjectHideFlags: 0
@@ -13212,6 +13335,7 @@ GameObject:
   - component: {fileID: 5934219881576113886}
   - component: {fileID: 3331521279155527995}
   - component: {fileID: 6470362150479013434}
+  - component: {fileID: 6476818663013612963}
   m_Layer: 0
   m_Name: o2_knob
   m_TagString: Untagged
@@ -13369,6 +13493,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6476818663013612963}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CompleteInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -13450,6 +13586,20 @@ CapsuleCollider:
   m_Height: 0.03
   m_Direction: 2
   m_Center: {x: 0.000015304422, y: 0, z: 0.0090149315}
+--- !u!114 &6476818663013612963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741701766472027400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsNecessary: 1
+  interactionsCompleted: 0
 --- !u!1 &5786316623286638464
 GameObject:
   m_ObjectHideFlags: 0
@@ -15521,6 +15671,7 @@ GameObject:
   - component: {fileID: 2251587489141475745}
   - component: {fileID: 7205992879470091406}
   - component: {fileID: 4904780868631058475}
+  - component: {fileID: 307920400617972862}
   m_Layer: 0
   m_Name: on_indicator_light
   m_TagString: Untagged
@@ -15640,6 +15791,20 @@ MonoBehaviour:
   screenTwoOnMaterial: {fileID: 2100000, guid: 9f6902b11f3a3e046bebea52a82c3a29, type: 2}
   screenOneRenderer: {fileID: 9058775309412684779}
   screenTwoRenderer: {fileID: 2704247689027292446}
+--- !u!114 &307920400617972862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907191912673752492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionsNecessary: 1
+  interactionsCompleted: 0
 --- !u!1 &7012747286856084292
 GameObject:
   m_ObjectHideFlags: 0
