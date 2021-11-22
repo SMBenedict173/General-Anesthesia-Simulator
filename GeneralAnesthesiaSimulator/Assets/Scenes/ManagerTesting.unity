@@ -1257,7 +1257,7 @@ PrefabInstance:
     - target: {fileID: 70430320921130615, guid: 66e59f5902d2d63498b1e5dda4d0bf70, type: 3}
       propertyPath: Sections.Array.data[1].Steps.Array.data[0].Substeps.Array.data[0].InteractionObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 1042278312}
+      objectReference: {fileID: 728367803}
     - target: {fileID: 70430320921130615, guid: 66e59f5902d2d63498b1e5dda4d0bf70, type: 3}
       propertyPath: Sections.Array.data[1].Steps.Array.data[0].Substeps.Array.data[0].InteractionObjects.Array.data[1]
       value: 
@@ -1265,7 +1265,7 @@ PrefabInstance:
     - target: {fileID: 70430320921130615, guid: 66e59f5902d2d63498b1e5dda4d0bf70, type: 3}
       propertyPath: Sections.Array.data[1].Steps.Array.data[0].Substeps.Array.data[1].InteractionObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 1042278312}
+      objectReference: {fileID: 728367803}
     - target: {fileID: 70430320921130615, guid: 66e59f5902d2d63498b1e5dda4d0bf70, type: 3}
       propertyPath: Sections.Array.data[1].Steps.Array.data[1].Substeps.Array.data[0].InteractionObjects.Array.data[0]
       value: 
@@ -1674,6 +1674,10 @@ PrefabInstance:
     - target: {fileID: 4416570130036920, guid: 6f7eb8a8eba9eb44a9639fd1c1add5b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19110617089304152, guid: 6f7eb8a8eba9eb44a9639fd1c1add5b2, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23578815963422068, guid: 6f7eb8a8eba9eb44a9639fd1c1add5b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
