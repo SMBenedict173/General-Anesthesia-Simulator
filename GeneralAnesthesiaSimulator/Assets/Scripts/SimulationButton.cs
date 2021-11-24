@@ -19,6 +19,7 @@ public class SimulationButton : Toggleable
 		IsActivated = false;
 		pressingHand = null;
 		triggerCollider = gameObject.GetComponent<Collider>();
+        gameObject.GetComponent<MeshRenderer>().material = offMaterial;
     }
 
 	new public void ToggleActivation()
@@ -32,6 +33,8 @@ public class SimulationButton : Toggleable
         {
             this.ChangeTexture();
         }
+
+        gameObject.GetComponent<Interactable>().CompleteInteraction();
     }
 	
 	private void OnTriggerEnter(Collider other)

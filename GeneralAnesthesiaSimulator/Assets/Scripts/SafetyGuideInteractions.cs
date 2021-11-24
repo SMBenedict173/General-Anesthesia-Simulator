@@ -125,6 +125,7 @@ public class SerializableStep
 {
     public string description;
     public bool isCompleted;
+    public bool hasSubsteps;
 
     [SerializeField]
     public List<SerializableSubstep> Substeps;
@@ -155,9 +156,12 @@ public class SerializableStep
         if(Substeps.Count == 0)
             return s;
 
-        foreach (var substep in Substeps)
+        if (this.hasSubsteps)
         {
-            s += "\n<margin=2em>" + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
+            foreach (var substep in Substeps)
+            {
+                s += "\n<margin=2em>" + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
+            }
         }
 
         return s;
@@ -173,15 +177,16 @@ public class SerializableStep
         else
             s += "<color=green> " + description + " </color>";
 
-        if (Substeps.Count == 0)
-            return s;
-
-        foreach (var substep in Substeps)
+        if (this.hasSubsteps)
         {
-            if (!substep.isCompleted)
-                s += "\n<margin=2em>" + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
-            else
-                s += "\n<margin=2em><color=green> " + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + " </color></margin>";
+
+            foreach (var substep in Substeps)
+            {
+                if (!substep.isCompleted)
+                    s += "\n<margin=2em>" + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
+                else
+                    s += "\n<margin=2em><color=green> " + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + " </color></margin>";
+            }
         }
 
         return s;
@@ -189,7 +194,7 @@ public class SerializableStep
 
     public string GetCurrentStep()
     {
-        if (Substeps.Count == 0)
+        if (Substeps.Count == 0 || !hasSubsteps)
             return description;
 
         foreach (var s in Substeps)
