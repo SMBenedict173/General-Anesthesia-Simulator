@@ -23,11 +23,6 @@ public class LeftHandController : MonoBehaviour
     private bool isPressing;
 
     [SerializeField]
-    private InputActionReference completeStep;
-    [SerializeField]
-    private SafetyGuideText safetyGuideText;
-
-    [SerializeField]
     private XRRayInteractor rayInteractor;
 
     [SerializeField]

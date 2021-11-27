@@ -952,8 +952,6 @@ MonoBehaviour:
   menuManager: {fileID: 434349280441490792}
   isHolding: 0
   interactor: {fileID: 1140562170417239227}
-  completeStep: {fileID: 835323661306303718, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  safetyGuideText: {fileID: 0}
   rayInteractor: {fileID: 8979470674068851568}
   rightHand: {fileID: 5090328778917677737}
   rightHandRayInteractor: {fileID: 7509013918597509665}

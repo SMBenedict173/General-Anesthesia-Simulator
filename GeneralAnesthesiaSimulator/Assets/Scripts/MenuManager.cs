@@ -14,7 +14,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.IsMenuOpen = false;
+        this.IsMenuOpen = true;
         this.startMenu.SetActive(true);
         this.pauseMenu.SetActive(false);
     }
@@ -44,6 +44,7 @@ public class MenuManager : MonoBehaviour
         if (toggleDelay <= 0.0F)
         {
             IsMenuOpen = false;
+            this.startMenu.SetActive(false);
             this.pauseMenu.SetActive(false);
             toggleDelay = 1.0F;
             //this.SimulationFlowManager.RestartTimer(); Not ready yet
