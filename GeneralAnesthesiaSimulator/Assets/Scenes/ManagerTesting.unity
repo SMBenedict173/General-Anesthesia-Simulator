@@ -1724,6 +1724,117 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.24920227, y: 0.24920204, z: 0.08095886}
   m_Center: {x: 0, y: 0, z: -0.04047943}
+--- !u!1 &644330249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2542478131399545100, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+  m_PrefabInstance: {fileID: 1042278311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &644330255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644330249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 101323072}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 5
+  m_TightenPosition: 0.5
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 5
+  m_TightenRotation: 0.5
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
 --- !u!1001 &733545473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2422,6 +2533,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 471124485351770789, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 471124485351770789, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471124485351770789, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471124485351770791, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.438
+      objectReference: {fileID: 0}
     - target: {fileID: 818853468668637516, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -2542,9 +2669,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2251674084579703138, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_Radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251674084579703138, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524204190383688909, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.431
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616231032244650826, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -111.270164
+      objectReference: {fileID: 0}
     - target: {fileID: 2616231032244650826, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -16.000854
+      value: -16.300846
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616231032244650826, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -38.43479
       objectReference: {fileID: 0}
     - target: {fileID: 2704247689027292446, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2590,6 +2737,18 @@ PrefabInstance:
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3567700218859441732, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 16.342371
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567700218859441732, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.4968971
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567700218859441732, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.0027123373
+      objectReference: {fileID: 0}
     - target: {fileID: 4221636153272571439, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -2619,8 +2778,16 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4247503929954465374, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -71.87567
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247503929954465374, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -15.459829
+      value: -15.752941
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247503929954465374, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -27.32856
       objectReference: {fileID: 0}
     - target: {fileID: 4299568002167631696, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2743,12 +2910,16 @@ PrefabInstance:
       value: AnesthesiaMachine
       objectReference: {fileID: 0}
     - target: {fileID: 7558646602778377745, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -131.6611
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558646602778377745, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -16.193676
+      value: -16.493618
       objectReference: {fileID: 0}
     - target: {fileID: 7558646602778377745, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -48.28488
+      value: -48.28489
       objectReference: {fileID: 0}
     - target: {fileID: 7816077680931051856, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_LocalScale.x

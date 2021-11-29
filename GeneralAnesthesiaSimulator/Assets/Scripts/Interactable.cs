@@ -17,6 +17,7 @@ public class Interactable : MonoBehaviour
 
     public void CompleteInteraction()
     {
+        Debug.Log(gameObject.name);
         if (isActive)
         {
             interactionsCompleted += 1;
