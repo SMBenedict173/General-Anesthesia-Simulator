@@ -9051,6 +9051,34 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1185257227350280156, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312380646963221014, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.080000915
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312380646963221014, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -3.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247503929954465374, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -27.331888
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586726707454852930, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.0000024214387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772429531728151358, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 2.1672032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772429531728151358, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.3551814
+      objectReference: {fileID: 0}
     - target: {fileID: 7458042003132124967, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_Name
       value: AnesthesiaMachine
@@ -9098,6 +9126,18 @@ PrefabInstance:
     - target: {fileID: 7839527816244909469, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557249017505503475, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.000001858134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557249017505503475, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.22765876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557249017505503475, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -2.6599998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
