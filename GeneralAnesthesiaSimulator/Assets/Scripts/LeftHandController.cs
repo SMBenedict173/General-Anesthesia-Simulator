@@ -23,13 +23,25 @@ public class LeftHandController : MonoBehaviour
     private bool isPressing;
 
     [SerializeField]
-    private InputActionReference completeStep;
+    private XRRayInteractor rayInteractor;
+
     [SerializeField]
-    private SafetyGuideText safetyGuideText;
+    private RightHandController rightHand;
+    [SerializeField]
+    private XRRayInteractor rightHandRayInteractor;
+
     // Start is called before the first frame update
     void Start()
     {
+        menuManager.OpenMenu();
 
+        //left hand 
+        rayInteractor.GetComponent<RayToggler>().SetEnabled(true);
+        interactor.GetComponent<DirectInteractorToggler>().SetEnabled(false);
+
+        //right hand 
+        rightHandRayInteractor.GetComponent<RayToggler>().SetEnabled(true);
+        rightHand.GetComponent<DirectInteractorToggler>().SetEnabled(false);
     }
 
     // Update is called once per frame
@@ -39,10 +51,26 @@ public class LeftHandController : MonoBehaviour
         if (menuManager.IsMenuOpen && menuInputValue > 0.5F)
         {
             menuManager.CloseMenu();
+
+            //left hand
+            rayInteractor.GetComponent<RayToggler>().SetEnabled(false);
+            interactor.GetComponent<DirectInteractorToggler>().SetEnabled(true);
+
+            //right hand 
+            rightHandRayInteractor.GetComponent<RayToggler>().SetEnabled(false);
+            rightHand.GetComponent<DirectInteractorToggler>().SetEnabled(true);
         }
         else if (!menuManager.IsMenuOpen && menuInputValue >0.5F)
         {
             menuManager.OpenMenu();
+
+            //left hand
+            rayInteractor.GetComponent<RayToggler>().SetEnabled(true);
+            interactor.GetComponent<DirectInteractorToggler>().SetEnabled(false);
+
+            //right hand 
+            rightHandRayInteractor.GetComponent<RayToggler>().SetEnabled(true);
+            rightHand.GetComponent<DirectInteractorToggler>().SetEnabled(false);
         }
         float selectInputValue = controller.selectAction.action.ReadValue<float>();
         this.thisHand.SetGrip(selectInputValue);

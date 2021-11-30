@@ -5,7 +5,8 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     public bool IsMenuOpen { get; private set; }
-    public GameObject menuRoot;
+    public GameObject startMenu;
+    public GameObject pauseMenu;
 
     private float toggleDelay;
 
@@ -13,8 +14,9 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.IsMenuOpen = false;
-        this.menuRoot.SetActive(false);
+        this.IsMenuOpen = true;
+        this.startMenu.SetActive(true);
+        this.pauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class MenuManager : MonoBehaviour
         if (toggleDelay <= 0.0F)
         {
             IsMenuOpen = true;
-            this.menuRoot.SetActive(true);
+            this.pauseMenu.SetActive(true);
             toggleDelay = 1.0F;
             //this.SimulationFlowManager.StopTimer(); Not ready yet
         }
@@ -42,7 +44,8 @@ public class MenuManager : MonoBehaviour
         if (toggleDelay <= 0.0F)
         {
             IsMenuOpen = false;
-            this.menuRoot.SetActive(false);
+            this.startMenu.SetActive(false);
+            this.pauseMenu.SetActive(false);
             toggleDelay = 1.0F;
             //this.SimulationFlowManager.RestartTimer(); Not ready yet
         }

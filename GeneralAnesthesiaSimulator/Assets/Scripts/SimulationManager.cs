@@ -38,12 +38,8 @@ public class SimulationManager : MonoBehaviour
             //update indexing
             UpdateIndexes();
 
-            guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
-
             EnableGuidingLightForCurrent();
-
-
-
+            guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
         }
 
     }
@@ -51,7 +47,8 @@ public class SimulationManager : MonoBehaviour
     private void UpdateIndexes()
     {
         // update indexes 
-        if (guideInteractions.Sections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted())
+        if (guideInteractions.Sections[currentSection].Steps[currentStep].Substeps[currentSubstep].IsCompleted() 
+            && currentInteraction == guideInteractions.Sections[currentSection].Steps[currentStep].Substeps[currentSubstep].InteractionObjects.Count)
         {
             currentSubstep += 1;
             currentInteraction = 0;
@@ -94,10 +91,6 @@ public class SimulationManager : MonoBehaviour
             .GetComponent<GuidingLight>().EnableHighlight();
         */
 
-        guideInteractions.Sections[currentSection]
-            .Steps[currentStep].Substeps[currentSubstep]
-            .InteractionObjects[currentInteraction]
-            .GetComponent<Interactable>().SetIncomplete();
 
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]

@@ -9,27 +9,20 @@ public class Interactable : MonoBehaviour
     private bool isActive = false;
 
     [SerializeField]
-    private int interactionsNecessary;
-
-    [SerializeField]
-    private int interactionsCompleted = 0; 
+    private bool autoComplete;
 
 
     public void CompleteInteraction()
     {
         if (isActive)
         {
-            interactionsCompleted += 1;
-
-            if (interactionsCompleted == interactionsNecessary)
-                this.completedInteraction = true;
+            this.completedInteraction = true;
         }
     }
 
     public void SetIncomplete()
     {
         this.completedInteraction = false;
-        this.interactionsCompleted = 0;
     }
 
     public bool GetCompletedInteraction()
@@ -40,6 +33,13 @@ public class Interactable : MonoBehaviour
     public void SetActive()
     {
         isActive = true;
+
+        SetIncomplete();
+
+        if (autoComplete)
+        {
+            completedInteraction = true;
+        }
     }
 
     public void SetInactive()
