@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c5830fe2076e5488c39623554a929e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoComplete: 0
   interactionsNecessary: 1
   interactionsCompleted: 0
 --- !u!1 &3712977855083342722
@@ -154,7 +155,6 @@ GameObject:
   - component: {fileID: 3682218686554412424}
   - component: {fileID: 6287440517432309447}
   - component: {fileID: 7414122448095303060}
-  - component: {fileID: 7722271985781052312}
   - component: {fileID: 19110617089304152}
   - component: {fileID: 5721491286518218117}
   m_Layer: 0
@@ -227,19 +227,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7722271985781052312
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3712977855083342722}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &19110617089304152
 Rigidbody:
   m_ObjectHideFlags: 0

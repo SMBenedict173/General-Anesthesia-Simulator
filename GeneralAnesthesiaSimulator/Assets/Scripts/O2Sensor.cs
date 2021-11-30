@@ -13,6 +13,8 @@ public class O2Sensor : MonoBehaviour
 
     private Quaternion originalRotation;
     private Vector3 originalPosition;
+
+    private bool isConnected;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +22,27 @@ public class O2Sensor : MonoBehaviour
         canConnect = false;
         originalPosition = transform.position;
         originalRotation = transform.rotation;
+        isConnected = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ToggleConnection()
+    {
+        Debug.Log("here");
+
+        if (isConnected)
+        {
+            Disconnect();
+        }
+        else
+        {
+            Connect();
+        }
     }
 
     public void Connect()
@@ -40,6 +57,8 @@ public class O2Sensor : MonoBehaviour
             canConnect = false;
             this.transform.rotation = originalRotation;
             this.transform.position = originalPosition;
+
+            this.isConnected = true;
         }
     }
 
@@ -47,6 +66,7 @@ public class O2Sensor : MonoBehaviour
     {
         this.connectionJoint.connectedBody = null;
         this.connectedTo = null;
+        this.isConnected = false;
     }
 
     private void OnTriggerEnter(Collider other)

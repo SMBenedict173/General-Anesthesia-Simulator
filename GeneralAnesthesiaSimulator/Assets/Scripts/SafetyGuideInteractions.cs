@@ -31,7 +31,7 @@ public class SafetyGuideInteractions : MonoBehaviour
 
         foreach (var section in Sections)
         {
-            if (!section.isCompleted)
+            if (!section.IsCompleted())
                 s += "\n" + section.ToStringFormatted();
             else
                 s += "\n<color=green>" + section.ToStringFormatted() + "</color>";
@@ -62,13 +62,6 @@ public class SerializableSection
     [SerializeField]
     public List<SerializableStep> Steps = new List<SerializableStep>();
 
-    public SerializableSection(string title, List<SerializableStep> steps)
-    {
-        this.title = title;
-        this.Steps = steps;
-        this.isCompleted = false;
-    }
-
 
     public bool IsCompleted()
     {
@@ -81,7 +74,7 @@ public class SerializableSection
     {
         foreach (var step in Steps)
         {
-            if (!step.isCompleted)
+            if (!step.IsCompleted())
                 return step.description;
         }
 
@@ -104,10 +97,10 @@ public class SerializableSection
     {
         string s = "";
 
-        if (!isCompleted)
+        if (!IsCompleted())
             s += "<b>" + title + "</b>";
 
-        if (isCompleted)
+        if (IsCompleted())
             s += "<color=green><b>" + title + "</color></b>";
 
         foreach (var step in Steps)
@@ -129,19 +122,6 @@ public class SerializableStep
 
     [SerializeField]
     public List<SerializableSubstep> Substeps;
-
-    public SerializableStep(string description)
-    {
-        this.description = description;
-        this.Substeps = new List<SerializableSubstep>();
-        this.isCompleted = false;
-    }
-    public SerializableStep(string description, List<SerializableSubstep> substeps)
-    {
-        this.description = description;
-        this.Substeps = substeps;
-        this.isCompleted = false;
-    }
 
     public bool IsCompleted()
     {
@@ -172,7 +152,7 @@ public class SerializableStep
     {
         string s = "";
 
-        if (!isCompleted)
+        if (!IsCompleted())
             s += description;
         else
             s += "<color=green> " + description + " </color>";
@@ -182,7 +162,7 @@ public class SerializableStep
 
             foreach (var substep in Substeps)
             {
-                if (!substep.isCompleted)
+                if (!substep.IsCompleted())
                     s += "\n<margin=2em>" + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
                 else
                     s += "\n<margin=2em><color=green> " + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + " </color></margin>";
@@ -215,20 +195,28 @@ public class SerializableSubstep
 
     [SerializeField]
     public List<GameObject> InteractionObjects;
-
-    public SerializableSubstep(string description)
-    {
-        this.description = description;
-    }
+    private int interactionsCompleted;
 
     public bool IsCompleted()
     {
-        isCompleted = InteractionObjects.All(a => a.GetComponent<Interactable>().GetCompletedInteraction() == true);
-        return isCompleted;
+        if(interactionsCompleted == InteractionObjects.Count)
+        {
+            isCompleted = true;
+            return true;
+        }
+
+        return false;
     }
 
     public bool CheckCompletion(int index)
     {
-        return InteractionObjects[index].GetComponent<Interactable>().GetCompletedInteraction();
+        if (InteractionObjects[index].GetComponent<Interactable>().GetCompletedInteraction())
+        {
+            interactionsCompleted += 1;
+            return true; 
+        }
+
+
+        return false;
     }
 }
