@@ -5,14 +5,16 @@ using UnityEngine;
 public class BellowsAnimation : MonoBehaviour
 {
     public float MaximumScale = 1F;
-    public float MinimumScale = 0.6F;
+    public float MinimumScale = 0.1F;
     public float AnimationDelta;
     private float currentScale;
     private float targetScale;
+
     // Start is called before the first frame update
     void Start()
     {
         currentScale = MaximumScale;
+        targetScale = MaximumScale;
     }
 
     // Update is called once per frame
@@ -20,9 +22,9 @@ public class BellowsAnimation : MonoBehaviour
     {
         if (currentScale != targetScale)
         {
-            Vector3 newScale = new Vector3(transform.localScale.x, transform.localScale.y, targetScale);
-            transform.localScale = Vector3.Slerp(transform.localScale, newScale, Time.deltaTime * AnimationDelta);
-            currentScale = transform.localScale.z;
+            Vector3 newScale = new Vector3(gameObject.transform.localScale.x, gameObject.transform.localScale.y, targetScale);
+            gameObject.transform.localScale = Vector3.Slerp(gameObject.transform.localScale, newScale, Time.deltaTime * AnimationDelta);
+            currentScale = gameObject.transform.localScale.z;
         }
     }
 
