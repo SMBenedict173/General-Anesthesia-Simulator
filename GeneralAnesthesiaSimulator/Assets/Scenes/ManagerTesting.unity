@@ -1828,29 +1828,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2069922231487367121, guid: b9ff67f7b42f06b4b89fdf43525c03da, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 12.300001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2069922231487367121, guid: b9ff67f7b42f06b4b89fdf43525c03da, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.49999952
-      objectReference: {fileID: 0}
     - target: {fileID: 2539072339681540115, guid: b9ff67f7b42f06b4b89fdf43525c03da, type: 3}
       propertyPath: m_Name
       value: Pump
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499210083667110177, guid: b9ff67f7b42f06b4b89fdf43525c03da, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9068153632337196248, guid: b9ff67f7b42f06b4b89fdf43525c03da, type: 3}
-      propertyPath: m_TrackPosition
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9068153632337196248, guid: b9ff67f7b42f06b4b89fdf43525c03da, type: 3}
-      propertyPath: m_TrackRotation
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9ff67f7b42f06b4b89fdf43525c03da, type: 3}
@@ -2838,8 +2818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoComplete: 0
-  interactionsNecessary: 1
-  interactionsCompleted: 0
 --- !u!114 &1135647547
 MonoBehaviour:
   m_ObjectHideFlags: 0
