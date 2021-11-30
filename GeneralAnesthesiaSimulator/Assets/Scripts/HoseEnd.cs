@@ -36,11 +36,10 @@ public class HoseEnd : MonoBehaviour
 
 	public void Connect()
 	{
-		
 		bool connectability = connectionInRange != null && canConnect;
 		if (connectability)
 		{
-			Debug.Log("Connection is possible");
+			Debug.Log("Connection Made");
 			this.connectionJoint.connectedBody = connectionInRange.gameObject.GetComponent<Rigidbody>();
 			connectedTo = connectionInRange;
 			canConnect = false;

@@ -206,7 +206,6 @@ GameObject:
   - component: {fileID: 5070971198473705061}
   - component: {fileID: 4744575340507212782}
   - component: {fileID: 6619241734055459160}
-  - component: {fileID: 117691577624078973}
   - component: {fileID: 7062335670260521118}
   - component: {fileID: 9032318904106593926}
   - component: {fileID: 171649214981944120}
@@ -278,20 +277,6 @@ FixedJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &117691577624078973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6803174924204208002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002365f7bfb27ba43842d714c8b3a12e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigid: {fileID: 4744575340507212782}
-  Collider: {fileID: 0}
 --- !u!135 &7062335670260521118
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -300,7 +285,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6803174924204208002}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.5
