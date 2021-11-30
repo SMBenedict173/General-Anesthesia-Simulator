@@ -34,7 +34,7 @@ public class SafetyGuideInteractions : MonoBehaviour
             if (!section.IsCompleted())
                 s += "\n" + section.ToStringFormatted();
             else
-                s += "\n<color=green>" + section.ToStringFormatted() + "</color>";
+                s += "\n<color=#007B00ff>" + section.ToStringFormatted() + "</color>";
         }
 
         return s;
@@ -101,7 +101,7 @@ public class SerializableSection
             s += "<b>" + title + "</b>";
 
         if (IsCompleted())
-            s += "<color=green><b>" + title + "</color></b>";
+            s += "<color=#007B00ff><b>" + title + "</color></b>";
 
         foreach (var step in Steps)
         {
@@ -155,7 +155,7 @@ public class SerializableStep
         if (!IsCompleted())
             s += description;
         else
-            s += "<color=green> " + description + " </color>";
+            s += "<color=#007B00ff> " + description + " </color>";
 
         if (this.hasSubsteps)
         {
@@ -165,7 +165,7 @@ public class SerializableStep
                 if (!substep.IsCompleted())
                     s += "\n<margin=2em>" + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + "</margin>";
                 else
-                    s += "\n<margin=2em><color=green> " + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + " </color></margin>";
+                    s += "\n<margin=2em><color=#007B00ff> " + (char)(Substeps.IndexOf(substep) + 97) + ". " + substep.description + " </color></margin>";
             }
         }
 
