@@ -33,7 +33,7 @@ public class LeftHandController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menuManager.OpenMenu();
+        menuManager.OpenStartMenu();
 
         //left hand 
         rayInteractor.GetComponent<RayToggler>().SetEnabled(true);

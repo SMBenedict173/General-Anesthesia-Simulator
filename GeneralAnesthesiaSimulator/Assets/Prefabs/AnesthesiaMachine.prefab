@@ -7151,7 +7151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerCollider: {fileID: 2251674084579703138}
-  connectedTo: {fileID: 0}
+  connectedTo: {fileID: 8432853275643000070}
   connectionJoint: {fileID: 3209659336393039162}
 --- !u!138 &3209659336393039162
 FixedJoint:
@@ -7160,7 +7160,7 @@ FixedJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2542478131399545100}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 6775636574866325594}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
