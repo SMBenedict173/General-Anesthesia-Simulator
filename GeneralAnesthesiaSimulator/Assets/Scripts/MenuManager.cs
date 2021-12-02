@@ -39,6 +39,17 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void OpenStartMenu()
+    {
+        if (toggleDelay <= 0.0F)
+        {
+            IsMenuOpen = true;
+            this.startMenu.SetActive(true);
+            toggleDelay = 1.0F;
+            //this.SimulationFlowManager.StopTimer(); Not ready yet
+        }
+    }
+
     public void CloseMenu()
     {
         if (toggleDelay <= 0.0F)
