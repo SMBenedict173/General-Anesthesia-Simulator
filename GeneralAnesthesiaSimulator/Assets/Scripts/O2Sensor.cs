@@ -31,19 +31,6 @@ public class O2Sensor : MonoBehaviour
         
     }
 
-    public void ToggleConnection()
-    {
-        Debug.Log("here");
-
-        if (isConnected)
-        {
-            Disconnect();
-        }
-        else
-        {
-            Connect();
-        }
-    }
 
     public void Connect()
     {

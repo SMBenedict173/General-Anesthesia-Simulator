@@ -19,12 +19,6 @@ public class SimulationManager : MonoBehaviour
     private int currentSubstep = 0;
     private int currentInteraction = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
-        EnableGuidingLightForCurrent();
-    }
 
     // Update is called once per frame
     void Update()
@@ -42,6 +36,12 @@ public class SimulationManager : MonoBehaviour
             guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
         }
 
+    }
+
+    public void startSimulation()
+    {
+        guideText.text = guideInteractions.GetSectionStringFormatted(currentSection);
+        EnableGuidingLightForCurrent();
     }
 
     private void UpdateIndexes()
@@ -69,7 +69,7 @@ public class SimulationManager : MonoBehaviour
         //check completed
         if (currentSection == 8)
         {
-            sceneLoader.Tester();
+            sceneLoader.NextScene();
         }
     }
 
@@ -84,12 +84,12 @@ public class SimulationManager : MonoBehaviour
 
     private void EnableGuidingLightForCurrent()
     {
-        /*
+        
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
-            .GetComponent<GuidingLight>().EnableHighlight();
-        */
+            .GetComponent<Outline>().enabled = true;
+        
 
 
         guideInteractions.Sections[currentSection]
@@ -100,12 +100,12 @@ public class SimulationManager : MonoBehaviour
 
     private void DisableGuidingLightForCurrent()
     {
-        /*
+        
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
             .InteractionObjects[currentInteraction]
-            .GetComponent<GuidingLight>().DisableHighlight();
-        */
+            .GetComponent<Outline>().enabled = false;
+        
 
         guideInteractions.Sections[currentSection]
             .Steps[currentStep].Substeps[currentSubstep]
