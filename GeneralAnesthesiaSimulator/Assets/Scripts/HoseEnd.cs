@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class HoseEnd : MonoBehaviour
 {
 	[SerializeField]
-	private SphereCollider triggerCollider;
+	private Collider triggerCollider;
 	private bool canConnect;
 	public HoseConnection connectedTo;
 	//[SerializeField]
