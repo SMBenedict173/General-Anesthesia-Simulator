@@ -97,7 +97,8 @@ public class Outline : MonoBehaviour {
 
     // Apply material properties immediately
     needsUpdate = true;
-  }
+        enabled = false;
+    }
 
   void OnEnable() {
     foreach (var renderer in renderers) {
