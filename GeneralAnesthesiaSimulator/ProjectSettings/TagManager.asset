@@ -11,8 +11,8 @@ TagManager:
   - Player
   - Water
   - UI
-  - Non-Collision with Player
-  - 
+  - ObjectBeingHeld
+  - PlayerHoldingObject
   - 
   - 
   - 
