@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(XRGrabInteractable))]
 public class Interactable : MonoBehaviour
 {
 
@@ -12,11 +14,23 @@ public class Interactable : MonoBehaviour
     private bool autoComplete;
 
 
+    [SerializeField]
+    private List<GameObject> subInteractables;
+
+    private bool isJointConnection;
+    private bool isJointDisconnection;
+
+
     public void CompleteInteraction()
     {
         if (isActive)
         {
             this.completedInteraction = true;
+
+            if(this.gameObject.GetComponent<HoseEnd>() != null)
+            {
+                this.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+            }
         }
     }
 
@@ -34,16 +48,26 @@ public class Interactable : MonoBehaviour
     {
         isActive = true;
 
+        if (this.gameObject.GetComponent<HoseEnd>() != null)
+        {
+            this.gameObject.GetComponent<XRGrabInteractable>().enabled = true;
+        }
+
         SetIncomplete();
 
         if (autoComplete)
         {
-            completedInteraction = true;
+            CompleteInteraction();
         }
     }
 
     public void SetInactive()
     {
         isActive = false;
+
+        if (this.gameObject.GetComponent<HoseEnd>() != null)
+        {
+            this.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+        }
     }
 }
