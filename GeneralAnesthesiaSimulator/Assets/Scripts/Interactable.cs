@@ -27,9 +27,14 @@ public class Interactable : MonoBehaviour
         {
             this.completedInteraction = true;
 
-            if(this.gameObject.GetComponent<HoseEnd>() != null)
+            if (isJointConnection || isJointDisconnection)
             {
                 this.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+
+                foreach (GameObject obj in subInteractables)
+                {
+                    obj.GetComponent<XRGrabInteractable>().enabled = true;
+                }
             }
         }
     }
@@ -46,28 +51,65 @@ public class Interactable : MonoBehaviour
 
     public void SetActive()
     {
-        isActive = true;
-
+        // if it is a joint interactable
         if (this.gameObject.GetComponent<HoseEnd>() != null)
         {
+            //check if it's currently connected to something
+            //(if it is, then this task is disconnect. If not, then this task is connect)
+
+            if (this.gameObject.GetComponent<HoseEnd>().IsConnected())
+            {
+                this.isJointConnection = false;
+                this.isJointDisconnection = true;
+            }
+            else
+            {
+                this.isJointConnection = true;
+                this.isJointDisconnection = false;
+            }
+
+            foreach (GameObject obj in subInteractables)
+            {
+                obj.GetComponent<XRGrabInteractable>().enabled = true;
+            }
+
             this.gameObject.GetComponent<XRGrabInteractable>().enabled = true;
         }
 
+        isActive = true;
         SetIncomplete();
 
         if (autoComplete)
         {
             CompleteInteraction();
         }
+
     }
 
     public void SetInactive()
     {
         isActive = false;
 
-        if (this.gameObject.GetComponent<HoseEnd>() != null)
+        if (isJointConnection || isJointDisconnection)
         {
             this.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+
+            foreach(GameObject obj in subInteractables)
+            {
+                obj.GetComponent<XRGrabInteractable>().enabled = true;
+            }
         }
+    }
+
+    public void JointDisconnected()
+    {
+        if (this.isJointDisconnection)
+            CompleteInteraction();
+    }
+
+    public void JointConnected()
+    {
+        if (this.isJointConnection)
+            CompleteInteraction();
     }
 }

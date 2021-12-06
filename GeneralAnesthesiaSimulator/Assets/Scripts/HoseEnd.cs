@@ -7,6 +7,7 @@ public class HoseEnd : MonoBehaviour
 	[SerializeField]
 	private Collider triggerCollider;
 	private bool canConnect;
+	private bool isConnected;
 	public HoseConnection connectedTo;
 	//[SerializeField]
 	//private UnityAction<SphereCollider> onEnterConnectionRange;
@@ -43,10 +44,11 @@ public class HoseEnd : MonoBehaviour
 			this.connectionJoint.connectedBody = connectionInRange.gameObject.GetComponent<Rigidbody>();
 			connectedTo = connectionInRange;
 			canConnect = false;
+			this.isConnected = true;
 			//this.transform.rotation = connectionInRange.transform.rotation;
 			//this.transform.position = connectionInRange.transform.position;
 
-			this.gameObject.GetComponent<Interactable>().CompleteInteraction();
+			this.gameObject.GetComponent<Interactable>().JointConnected();
         }
 	}
 
@@ -54,6 +56,8 @@ public class HoseEnd : MonoBehaviour
 	{
 		this.connectionJoint.connectedBody = null;
 		this.connectedTo = null;
+		this.isConnected = false;
+		this.gameObject.GetComponent<Interactable>().JointDisconnected();
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -71,4 +75,9 @@ public class HoseEnd : MonoBehaviour
 		canConnect = false;
 		connectionInRange = null;
 	}
+
+	public bool IsConnected()
+    {
+		return this.isConnected;
+    }
 }
