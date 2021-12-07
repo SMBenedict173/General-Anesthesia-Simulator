@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2670311190378271672}
   - component: {fileID: 1284241398762653424}
   - component: {fileID: 2885498544559848841}
-  - component: {fileID: 6146078517629977703}
   m_Layer: 0
   m_Name: SimulatedLung
   m_TagString: Untagged
@@ -233,26 +232,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoComplete: 0
   subInteractables: []
---- !u!114 &6146078517629977703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2767490378640092940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd51554c107fdb4eaeca9c527b8e6cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaximumScale: 1.5
-  MinimumScale: 1
-  AnimationDelta: 5
-  simulatedLungConnection: {fileID: 0}
-  correctConnection: {fileID: 0}
-  bagVentLever: {fileID: 0}
-  o2FlowMeterDial: {fileID: 0}
-  powerButton: {fileID: 0}
 --- !u!1 &5363867640721080182
 GameObject:
   m_ObjectHideFlags: 0
