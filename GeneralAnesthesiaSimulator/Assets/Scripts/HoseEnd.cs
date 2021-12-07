@@ -70,6 +70,7 @@ public class HoseEnd : MonoBehaviour
 		
 		if (other.gameObject.GetComponent<HoseConnection>() != null)
 		{
+			Debug.Log($"canConnect: {canConnect}");
 			canConnect = true;
 			connectionInRange = other.gameObject.GetComponent<HoseConnection>();
 		}
