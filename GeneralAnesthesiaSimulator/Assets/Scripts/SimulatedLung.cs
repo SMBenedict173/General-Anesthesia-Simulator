@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class BellowsAnimation : MonoBehaviour
+public class SimulatedLung : MonoBehaviour
 {
-    public float MaximumScale = 1F;
-    public float MinimumScale = 0.1F;
+    public float MaximumScale = 1.5F;
+    public float MinimumScale = 1F;
     public float AnimationDelta;
     private float currentScale;
     private float targetScale;
@@ -23,24 +22,24 @@ public class BellowsAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentScale = MaximumScale;
-        targetScale = MaximumScale;
+        currentScale = MinimumScale;
+        targetScale = MinimumScale;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (simulatedLungConnection.connectedTo == correctConnection &&
+        if (simulatedLungConnection.connedctedTo == correctConnection &&
             bagVentLever.GetActivationStatus() &&
             o2FlowMeterDial.GetActivationStatus() &&
             powerButton.GetActivationStaus())
         {
-            Debug.Log("All conditions required for the bellows to animate are met.");
+            Debug.Log("All conditions required for the simulated lung to animate are met.");
             if (currentScale == MaximumScale)
             {
                 Collapse();
             }
-            else if(currentScale == MinimumScale)
+            else if (currentScale == MinimumScale)
             {
                 Expand();
             }
@@ -52,7 +51,7 @@ public class BellowsAnimation : MonoBehaviour
     {
         if (currentScale != targetScale)
         {
-            Vector3 newScale = new Vector3(gameObject.transform.localScale.x, gameObject.transform.localScale.y, targetScale);
+            Vector3 newScale = new Vector3(gameObject.transform.localScale.x, targetScale, gameObject.transform.localScale.z);
             gameObject.transform.localScale = Vector3.Slerp(gameObject.transform.localScale, newScale, Time.deltaTime * AnimationDelta);
             currentScale = gameObject.transform.localScale.z;
         }
@@ -67,5 +66,4 @@ public class BellowsAnimation : MonoBehaviour
     {
         targetScale = MinimumScale;
     }
-    
 }
