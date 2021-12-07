@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(XRGrabInteractable))]
 public class Interactable : MonoBehaviour
 {
 
@@ -12,11 +14,29 @@ public class Interactable : MonoBehaviour
     private bool autoComplete;
 
 
+    [SerializeField]
+    private List<GameObject> subInteractables;
+
+    private bool isJointConnection;
+    private bool isJointDisconnection;
+
+
     public void CompleteInteraction()
     {
         if (isActive)
         {
             this.completedInteraction = true;
+
+            if (isJointConnection || isJointDisconnection)
+            {
+                this.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+
+                foreach (GameObject obj in subInteractables)
+                {
+                    obj.GetComponent<XRGrabInteractable>().enabled = true;
+                    obj.GetComponent<Collider>().enabled = true;
+                }
+            }
         }
     }
 
@@ -32,18 +52,67 @@ public class Interactable : MonoBehaviour
 
     public void SetActive()
     {
-        isActive = true;
+        // if it is a joint interactable
+        if (this.gameObject.GetComponent<HoseEnd>() != null)
+        {
+            //check if it's currently connected to something
+            //(if it is, then this task is disconnect. If not, then this task is connect)
 
+            if (this.gameObject.GetComponent<HoseEnd>().IsConnected())
+            {
+                this.isJointConnection = false;
+                this.isJointDisconnection = true;
+            }
+            else
+            {
+                this.isJointConnection = true;
+                this.isJointDisconnection = false;
+            }
+
+            foreach (GameObject obj in subInteractables)
+            {
+                obj.GetComponent<XRGrabInteractable>().enabled = false;
+                obj.GetComponent<Collider>().enabled = false;
+            }
+
+            this.gameObject.GetComponent<XRGrabInteractable>().enabled = true;
+        }
+
+        isActive = true;
         SetIncomplete();
 
         if (autoComplete)
         {
-            completedInteraction = true;
+            CompleteInteraction();
         }
+
     }
 
     public void SetInactive()
     {
         isActive = false;
+
+        if (isJointConnection || isJointDisconnection)
+        {
+            this.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+
+            foreach(GameObject obj in subInteractables)
+            {
+                obj.GetComponent<XRGrabInteractable>().enabled = true;
+                obj.GetComponent<Collider>().enabled = true;
+            }
+        }
+    }
+
+    public void JointDisconnected()
+    {
+        if (this.isJointDisconnection)
+            CompleteInteraction();
+    }
+
+    public void JointConnected()
+    {
+        if (this.isJointConnection)
+            CompleteInteraction();
     }
 }
