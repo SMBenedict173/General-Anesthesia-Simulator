@@ -34,6 +34,7 @@ public class Interactable : MonoBehaviour
                 foreach (GameObject obj in subInteractables)
                 {
                     obj.GetComponent<XRGrabInteractable>().enabled = true;
+                    obj.GetComponent<Collider>().enabled = true;
                 }
             }
         }
@@ -70,7 +71,8 @@ public class Interactable : MonoBehaviour
 
             foreach (GameObject obj in subInteractables)
             {
-                obj.GetComponent<XRGrabInteractable>().enabled = true;
+                obj.GetComponent<XRGrabInteractable>().enabled = false;
+                obj.GetComponent<Collider>().enabled = false;
             }
 
             this.gameObject.GetComponent<XRGrabInteractable>().enabled = true;
@@ -97,6 +99,7 @@ public class Interactable : MonoBehaviour
             foreach(GameObject obj in subInteractables)
             {
                 obj.GetComponent<XRGrabInteractable>().enabled = true;
+                obj.GetComponent<Collider>().enabled = true;
             }
         }
     }

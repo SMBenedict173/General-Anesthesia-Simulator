@@ -7,6 +7,7 @@ public class HoseEnd : MonoBehaviour
 	[SerializeField]
 	private Collider triggerCollider;
 	private bool canConnect;
+	[SerializeField]
 	private bool isConnected;
 	public HoseConnection connectedTo;
 	//[SerializeField]
@@ -50,6 +51,11 @@ public class HoseEnd : MonoBehaviour
 
 			this.gameObject.GetComponent<Interactable>().JointConnected();
         }
+        else
+        {
+			this.isConnected = false;
+			this.gameObject.GetComponent<Interactable>().JointDisconnected();
+		}
 	}
 
 	public void Disconnect()
@@ -57,7 +63,6 @@ public class HoseEnd : MonoBehaviour
 		this.connectionJoint.connectedBody = null;
 		this.connectedTo = null;
 		this.isConnected = false;
-		this.gameObject.GetComponent<Interactable>().JointDisconnected();
 	}
 
     private void OnTriggerEnter(Collider other)
