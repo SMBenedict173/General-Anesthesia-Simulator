@@ -29,10 +29,10 @@ public class SimulatedLung : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (simulatedLungConnection.connedctedTo == correctConnection &&
+        if (simulatedLungConnection.connectedTo == correctConnection &&
             bagVentLever.GetActivationStatus() &&
             o2FlowMeterDial.GetActivationStatus() &&
-            powerButton.GetActivationStaus())
+            powerButton.GetActivationStatus())
         {
             Debug.Log("All conditions required for the simulated lung to animate are met.");
             if (currentScale == MaximumScale)
@@ -51,7 +51,7 @@ public class SimulatedLung : MonoBehaviour
     {
         if (currentScale != targetScale)
         {
-            Vector3 newScale = new Vector3(gameObject.transform.localScale.x, targetScale, gameObject.transform.localScale.z);
+            Vector3 newScale = new Vector3(gameObject.transform.localScale.x, targetScale, targetScale);
             gameObject.transform.localScale = Vector3.Slerp(gameObject.transform.localScale, newScale, Time.deltaTime * AnimationDelta);
             currentScale = gameObject.transform.localScale.z;
         }

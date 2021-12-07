@@ -6548,6 +6548,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4806442870572057877, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806442870572057877, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806442870572057877, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806442870572057877, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.574
       objectReference: {fileID: 0}
@@ -6587,17 +6599,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6146078517629977703, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: powerButton
+      value: 
+      objectReference: {fileID: 1042278314}
+    - target: {fileID: 6146078517629977703, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: bagVentLever
+      value: 
+      objectReference: {fileID: 1042278317}
+    - target: {fileID: 6146078517629977703, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: o2FlowMeterDial
+      value: 
+      objectReference: {fileID: 1042278316}
+    - target: {fileID: 6146078517629977703, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: correctConnection
+      value: 
+      objectReference: {fileID: 1934690348}
+    - target: {fileID: 6146078517629977703, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: simulatedLungConnection
+      value: 
+      objectReference: {fileID: 734288889}
+    - target: {fileID: 8605478965376032831, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9157646933250863277, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
       propertyPath: m_Name
       value: SimulatedLung
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6146078517629977703, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
 --- !u!1 &734288888 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2767490378640092940, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
   m_PrefabInstance: {fileID: 734288887}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &734288889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3977234413574567451, guid: fd120bff218a6664b8aa217d7da5a878, type: 3}
+  m_PrefabInstance: {fileID: 734288887}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228070985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8df1751f56456b4dbcbab608a63b602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &734288895
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9245,6 +9293,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1056099869}
+    - target: {fileID: 1185257227350280156, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1312380646963221014, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.080000915
@@ -9543,6 +9595,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50e2d3a68926dc4898f4068477533d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1042278314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7205992879470091406, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+  m_PrefabInstance: {fileID: 1042278311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527148894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825cef535615b5c4fa443ed8d7f35db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1042278315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 447750907722096894, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+  m_PrefabInstance: {fileID: 1042278311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1042278316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9191388032468557909, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+  m_PrefabInstance: {fileID: 1042278311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957681524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6695e6df18175e04b8019fe49105c87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1042278317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1561003162501591890, guid: 431f12af2419eef47abe9188190d8ab1, type: 3}
+  m_PrefabInstance: {fileID: 1042278311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617315881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6695e6df18175e04b8019fe49105c87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1042278318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042278315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e408e5d16313bd458465fbbb682850a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaximumScale: 0.6
+  MinimumScale: 0.4
+  AnimationDelta: 10
+  simulatedLungConnection: {fileID: 734288889}
+  correctConnection: {fileID: 1934690348}
+  bagVentLever: {fileID: 1042278317}
+  o2FlowMeterDial: {fileID: 1042278316}
+  powerButton: {fileID: 1042278314}
 --- !u!1001 &1045164208
 PrefabInstance:
   m_ObjectHideFlags: 0

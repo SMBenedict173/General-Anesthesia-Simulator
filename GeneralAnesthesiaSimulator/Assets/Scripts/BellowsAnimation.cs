@@ -33,9 +33,8 @@ public class BellowsAnimation : MonoBehaviour
         if (simulatedLungConnection.connectedTo == correctConnection &&
             bagVentLever.GetActivationStatus() &&
             o2FlowMeterDial.GetActivationStatus() &&
-            powerButton.GetActivationStaus())
+            powerButton.GetActivationStatus())
         {
-            Debug.Log("All conditions required for the bellows to animate are met.");
             if (currentScale == MaximumScale)
             {
                 Collapse();
